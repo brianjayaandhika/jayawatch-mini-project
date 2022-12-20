@@ -1,1 +1,43 @@
+/* BS Icon */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Poppins:wght@400;700&display=swap"); /* Styles */
+/* Kanit for Brand Name */
+/* Poppins for text */
+
+/* Colour */
+:root {
+  --bs-yellow: #fcf404;
+}
+
+/* Styles */
+
+body {
+  background-color: #000;
+}
+
+/* Styles - Navigation */
+
+/* Media Queries */
+
+/* Large Breakpoint */
+@media only screen and (max-width: 992px) {
+  /* Nav */
+
+  /* Showcase */
+}
+
+/* Medium Breakpoint */
+@media only screen and (max-width: 768px) {
+  /* Nav */
+
+  /* Showcase */
+}
+
+/* Small Breakpoint */
+@media only screen and (max-width: 576px) {
+  /* Nav */
+
+  /* Showcase */
+}
