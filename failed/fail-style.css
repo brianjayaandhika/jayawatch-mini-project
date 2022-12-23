@@ -25,8 +25,9 @@ body {
 #navbar-brand {
   color: var(--bs-yellow);
   letter-spacing: 3px;
-  font-size: 2em;
+  font-size: 3em;
   font-family: "Kanit";
+  text-shadow: 20px 20px 2px 2px #fff;
 }
 
 .left-side-nav {

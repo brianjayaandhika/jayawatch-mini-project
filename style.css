@@ -19,25 +19,186 @@ body {
 
 /* Styles - Navigation */
 
+.navbar-brand {
+  color: var(--bs-yellow);
+  letter-spacing: 3px;
+  font-size: 2.5em;
+  font-family: "Kanit";
+}
+
+.navbar-brand:hover,
+.navbar-brand:active,
+.navbar-brand:visited {
+  color: var(--bs-yellow);
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: white;
+  font-family: "Poppin";
+}
+
+.nav-signIn {
+  width: 6.25rem;
+  color: white;
+  font-size: 1.3em;
+  font-family: "Poppin";
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+/* End of Navbar */
+/* Showcase */
+
+.img-col img {
+  width: 35rem;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #ccc;
+}
+
+.display-title {
+  font-size: 2em;
+  line-height: 49px;
+  font-weight: 700;
+  color: white;
+  font-family: "Poppin";
+}
+
+.display-categories {
+  font-size: 1.2em;
+  color: rgba(214, 210, 210, 0.812);
+  margin-bottom: 2rem;
+  font-family: "Poppin";
+}
+
+.display-description {
+  font-family: "Poppin";
+  font-size: 1.4em;
+  width: 31rem;
+  color: white;
+}
+
+/* Alert */
+.alert {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-bottom: 0;
+}
+
 /* Media Queries */
 
 /* Large Breakpoint */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
+  body {
+    background-color: green;
+  }
   /* Nav */
 
   /* Showcase */
+  .display-description {
+    font-size: 1.4em;
+    width: 100%;
+    min-width: 21rem;
+  }
 }
 
 /* Medium Breakpoint */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+  body {
+    background-color: salmon;
+  }
   /* Nav */
+  /* Nav */
+  .nav-signIn {
+    display: none;
+  }
+
+  .dropdown-signIn {
+    display: block !important;
+  }
+
+  .navbar-nav {
+    margin-right: -70px;
+  }
+
+  .img-col img {
+    width: 45rem !important;
+  }
+
+  .navbar-brand {
+    margin-left: 80px;
+  }
+
+  .navbar-expand .navbar-nav .dropdown-menu {
+    top: 10px !important;
+    right: -74px !important;
+  }
 
   /* Showcase */
+  .row-showcase {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-col img {
+    margin-bottom: -2rem;
+  }
+
+  .disp-col {
+    text-align: center;
+    align-items: center;
+  }
+
+  .display-description {
+    display: none;
+  }
+
+  .display-categories {
+    margin-bottom: 15px;
+  }
+
+  .alert {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 /* Small Breakpoint */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575px) {
+  body {
+    background-color: darkorchid;
+    overflow-x: hidden;
+  }
   /* Nav */
+  .nav-signIn {
+    display: none;
+  }
+
+  .dropdown-signIn {
+    display: block !important;
+  }
+
+  .navbar-nav {
+    margin-right: -70px;
+  }
+
+  .img-col img {
+    width: 45rem !important;
+  }
+
+  .navbar-brand {
+    margin-left: 80px;
+  }
+
+  .navbar-expand .navbar-nav .dropdown-menu {
+    top: 10px !important;
+    right: -74px !important;
+  }
 
   /* Showcase */
 }
