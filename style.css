@@ -88,6 +88,154 @@ body {
   padding-bottom: 0;
 }
 
+/* Trending */
+.movies-title {
+  font-family: "Kanit";
+  color: white;
+  margin-bottom: 25px;
+}
+
+.card {
+  width: fit-content;
+  border-radius: 25px;
+  opacity: 0.8;
+  transition: 0.75s;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-item,
+.carousel-inner,
+.carousel {
+  border-radius: 25px;
+}
+
+.card-popular-thumb-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/Popular/thumbnail-1.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-popular-thumb-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/Popular/thumbnail-2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-popular-thumb-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/Popular/thumbnail-3.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-popular-thumb-4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/Popular/thumbnail-4.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-popular-thumb-5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/Popular/thumbnail-5.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-popular-thumb-6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/Popular/thumbnail-6.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-popular-thumb-7 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/Popular/thumbnail-7.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.card-new-thumb-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/New/thumbnail-1.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-new-thumb-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/New/thumbnail-2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-new-thumb-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/New/thumbnail-3.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-new-thumb-4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/New/thumbnail-4.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-new-thumb-5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/New/thumbnail-5.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-new-thumb-6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/New/thumbnail-6.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.card-new-thumb-7 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/New/thumbnail-7.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 50px;
+  cursor: pointer;
+  width: 500px;
+  height: 400px;
+}
+
+.card-img-overlay h1 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+
+.card-img-overlay p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
 /* Media Queries */
 
 /* Large Breakpoint */
