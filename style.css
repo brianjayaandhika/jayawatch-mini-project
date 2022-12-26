@@ -21,8 +21,8 @@ body {
 
 .navbar-brand {
   color: var(--bs-yellow);
-  letter-spacing: 3px;
-  font-size: 2.5em;
+  letter-spacing: 0.1875rem;
+  font-size: 2.5rem;
   font-family: "Kanit";
 }
 
@@ -34,7 +34,7 @@ body {
 
 .nav-item a {
   text-decoration: none;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   color: white;
   font-family: "Poppin";
 }
@@ -42,15 +42,36 @@ body {
 .nav-signIn {
   width: 6.25rem;
   color: white;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-family: "Poppin";
 }
 
 .dropdown-toggle::after {
   display: none;
 }
-/* End of Navbar */
-/* Showcase */
+/* End of Styles - Navigation */
+
+/* Styles - Alert */
+.alert {
+  padding: 0.625rem;
+  padding-bottom: 0rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.alert > p {
+  position: relative;
+  top: 0.1875rem !important;
+}
+
+.alert > button {
+  top: -0.1875rem !important;
+}
+
+/* End of Styles - Alert */
+
+/* Styles - Showcase */
 
 .img-col img {
   width: 35rem;
@@ -59,15 +80,15 @@ body {
 }
 
 .display-title {
-  font-size: 2em;
-  line-height: 49px;
+  font-size: 2rem;
+  line-height: 3.0625rem;
   font-weight: 700;
   color: white;
   font-family: "Poppin";
 }
 
 .display-categories {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: rgba(214, 210, 210, 0.812);
   margin-bottom: 2rem;
   font-family: "Poppin";
@@ -75,29 +96,136 @@ body {
 
 .display-description {
   font-family: "Poppin";
-  font-size: 1.4em;
+  font-size: 1.4rem;
   width: 31rem;
   color: white;
 }
 
-/* Alert */
-.alert {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding-bottom: 0;
+/* End of Styles - Showcase */
+
+/* Styles - Modal */
+.modal-content {
+  background-color: black;
+  color: white;
+  width: 43.75rem;
 }
 
-/* Trending */
+.modal-header {
+  height: 31.25rem;
+  border-bottom: 0 !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.modal-header-showcase {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/New/thumbnail-5.webp);
+}
+.modal-header-popular-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/Popular/thumbnail-1.webp);
+}
+.modal-header-popular-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/Popular/thumbnail-2.webp);
+}
+.modal-header-popular-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/Popular/thumbnail-3.webp);
+}
+.modal-header-popular-4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/Popular/thumbnail-4.webp);
+}
+.modal-header-popular-5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/Popular/thumbnail-5.webp);
+}
+.modal-header-popular-6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/Popular/thumbnail-6.webp);
+}
+.modal-header-popular-7 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/Popular/thumbnail-7.webp);
+}
+.modal-header-new-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/New/thumbnail-1.webp);
+}
+.modal-header-new-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/New/thumbnail-2.webp);
+}
+.modal-header-new-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/New/thumbnail-3.webp);
+}
+.modal-header-new-4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/New/thumbnail-4.webp);
+}
+.modal-header-new-5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/New/thumbnail-5.webp);
+}
+.modal-header-new-6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/New/thumbnail-6.webp);
+}
+.modal-header-new-7 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/New/thumbnail-7.webp);
+}
+
+.modal-header button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba(255,255,255,1)'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
+    center/1em auto no-repeat;
+}
+
+.modal-body {
+  margin-top: -10.625rem;
+}
+
+.modal-title {
+  font-size: 2rem;
+  line-height: 3.0625rem;
+  font-weight: 700;
+  color: white;
+  font-family: "Poppin";
+}
+
+.modal-categories {
+  font-size: 1.2rem;
+  color: rgba(214, 210, 210, 0.812);
+  margin-bottom: 2rem;
+  font-family: "Poppin";
+  margin-bottom: 0.9375rem;
+}
+
+.modal-description {
+  font-family: "Poppin";
+  font-size: 1.2rem;
+  width: 41rem;
+  color: white;
+  line-height: 2.4375rem;
+}
+
+.modal-cast {
+  font-family: "Poppin";
+  font-size: 1.1rem;
+  width: 41rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1rem;
+}
+
+.modal-body-button {
+  display: flex;
+  gap: 0.9375rem;
+  justify-content: end;
+}
+
+/* End of Styles - Modal */
+
+/* Styles - Movies */
 .movies-title {
   font-family: "Kanit";
   color: white;
-  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
 }
 
 .card {
   width: fit-content;
-  border-radius: 25px;
+  border-radius: 1.5625rem;
   opacity: 0.8;
   transition: 0.75s;
   overflow: hidden;
@@ -221,10 +349,10 @@ body {
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  padding-bottom: 50px;
+  padding-bottom: 3.125rem;
   cursor: pointer;
-  width: 500px;
-  height: 400px;
+  width: 31.25rem;
+  height: 25rem;
 }
 
 .card-img-overlay h1 {
@@ -236,7 +364,20 @@ body {
   font-size: 1.2rem;
   opacity: 0.8;
 }
+
+/* End of Styles - Movies */
+
 /* Media Queries */
+
+/* Large Breakpoint */
+@media only screen and (max-width: 1200px) {
+  body {
+    background-color: pink;
+  }
+  /* Nav */
+
+  /* Showcase */
+}
 
 /* Large Breakpoint */
 @media only screen and (max-width: 991px) {
@@ -247,7 +388,7 @@ body {
 
   /* Showcase */
   .display-description {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     width: 100%;
     min-width: 21rem;
   }
@@ -269,7 +410,7 @@ body {
   }
 
   .navbar-nav {
-    margin-right: -70px;
+    margin-right: -4.375rem;
   }
 
   .img-col img {
@@ -277,12 +418,12 @@ body {
   }
 
   .navbar-brand {
-    margin-left: 80px;
+    margin-left: 5rem;
   }
 
   .navbar-expand .navbar-nav .dropdown-menu {
-    top: 10px !important;
-    right: -74px !important;
+    top: 0.625rem !important;
+    right: -4.625rem !important;
   }
 
   /* Showcase */
@@ -306,13 +447,7 @@ body {
   }
 
   .display-categories {
-    margin-bottom: 15px;
-  }
-
-  .alert {
-    position: absolute;
-    right: 0;
-    top: 0;
+    margin-bottom: 0.9375rem;
   }
 }
 
@@ -332,7 +467,7 @@ body {
   }
 
   .navbar-nav {
-    margin-right: -70px;
+    margin-right: -4.375rem;
   }
 
   .img-col img {
@@ -340,12 +475,12 @@ body {
   }
 
   .navbar-brand {
-    margin-left: 80px;
+    margin-left: 5rem;
   }
 
   .navbar-expand .navbar-nav .dropdown-menu {
-    top: 10px !important;
-    right: -74px !important;
+    top: 0.625rem !important;
+    right: -4.625rem !important;
   }
 
   /* Showcase */

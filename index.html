@@ -14,7 +14,7 @@
     <div class="nav navbar-expand mb-2">
       <div class="container">
         <div class="row nav-row">
-          <div class="col-6 d-flex justify-content-start">
+          <div class="col-6 d-flex justify-content-center pe-5">
             <a href="#" class="navbar-brand">JayaWatch</a>
           </div>
           <div class="col-6 d-flex justify-content-center align-items-center">
@@ -49,8 +49,13 @@
       </div>
     </div>
     <!-- End of Navigation -->
-
-    <!-- Showcase -->
+    <!-- Alert -->
+    <div class="alert alert-success alert-dismissible" role="alert" style="width: auto">
+      <p>New movies coming out on 2023! <a href="#" class="alert-link me-5">Check it out</a></p>
+      <button type="button" class="btn-close" aria-label="close" data-bs-dismiss="alert"></button>
+    </div>
+    <!-- End of Alert -->
+    <!-- Showcase Section  -->
     <div class="container">
       <div class="row g-5 row-showcase">
         <div class="col-sm-10 col-md-6 col-10 img-col d-flex justify-content-start">
@@ -63,18 +68,39 @@
             A Chinese drama about an ugly boy who is suddenly able to switch between his original body and a handsome body. Lookism tells the story of an 'ugly' boy, Wen Shuai, who finally gets the courage to transfer after being bullied in
             his original school. He then discovers that he has two very different bodies. One is his original ugly body and the other is a handsome body.
           </p>
-          <button class="btn mt-2 btn-primary display-modal-button" style="width: fit-content">More Details!</button>
+          <!-- Button trigger modal for Showcase Section-->
+          <button class="btn mt-2 btn-primary display-modal-button" style="width: fit-content" data-bs-toggle="modal" data-bs-target="#showcase-modal-button">More Details!</button>
+          <!-- Modal -->
+          <div class="modal fade" id="showcase-modal-button" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="showcase-modal-buttonLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header modal-header-showcase">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column">
+                  <h1 class="modal-title">Lookism</h1>
+                  <h2 class="modal-categories">Series</h2>
+                  <p class="modal-description">
+                    Lookism tells the story of an 'ugly' boy, Wen Shuai, who finally gets the courage to transfer after being bullied in his original school. He then discovers that he has two very different bodies. One is his original ugly
+                    body and the other is a handsome body. Wen Shuai finds out that he can switch between the two bodies. One body will appear when he's awake, and the other body will appear when he's sleeping. The secret of the two bodies
+                    completely changes Wen Shuai's life. He has never been welcomed and felt the beauty and convenience of being popular. But at the same time, this handsome body hides a huge secret. When the original owner of the handsome
+                    body, Kris, wakes up, the layers of the mystery begin to unravel.
+                  </p>
+                  <p class="modal-cast">Cast: Shim Kyu-Hyuck, Han Shin, Ryu Seung-gone</p>
+                  <div class="modal-body-button">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Watch Now!</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- Alert -->
-    <div class="alert alert-success alert-dismissible" role="alert" style="width: auto">
-      <p>New movies coming out on 2023! <a href="#" class="alert-link">Check it out</a></p>
-      <button type="button" class="btn-close" aria-label="close" data-bs-dismiss="alert"></button>
-    </div>
-    <!-- End of Alert -->
-    <!-- End of Showcase -->
-    <!-- Trending Section -->
+
+    <!-- End of Showcase Section -->
+    <!-- Movies Section -->
     <div class="container mt-5" style="height: 1200px">
       <div class="row">
         <div class="col-6 d-flex flex-column align-items-center">
@@ -91,58 +117,248 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-1">
                   <div class="card-img-overlay card-popular-thumb-1">
                     <h1 class="card-title">The Queen's Gambit</h1>
                     <p class="card-text">Series</p>
                   </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="popular-modal-button-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-1Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-popular-1">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">The Queen`s Gambit</h1>
+                        <h2 class="modal-categories">Series</h2>
+                        <p class="modal-description">
+                          Orphaned at the tender age of nine, prodigious introvert Beth Harmon discovers and masters the game of chess in 1960s USA. But child stardom comes at a price. Nine year-old orphan Beth Harmon is quiet, sullen, and
+                          by all appearances unremarkable. That is, until she plays her first game of chess. Her senses grow sharper, her thinking clearer, and for the first time in her life she feels herself fully in control. By the age of
+                          sixteen, she's competing for the U.S. Open championship. But as Beth hones her skills on the professional circuit, the stakes get higher, her isolation grows more frightening, and the thought of escape becomes all
+                          the more tempting. Based on the book by Walter Tevis. After her mother dies in a car accident nine-year-old Beth Harmon is sent to an orphanage. A shy, withdrawn girl she finds a purpose when the school janitor
+                          teaches her to play chess. She demonstrates a prodigious talent for the game and is soon competing at a very high level. However, she has also developed a drug addiction as this seems to help her play. She seems
+                          set on a path for fame...and self-destruction.
+                        </p>
+                        <p class="modal-cast">Director: Scott Frank, Allan Scott</p>
+                        <p class="modal-cast">Cast: Anya Taylor-Joy, Bill Camp, Marielle Heller</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-2">
                   <div class="card-img-overlay card-popular-thumb-2">
                     <h1 class="card-title">Naruto Shippuden</h1>
                     <p class="card-text">Anime</p>
                   </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="popular-modal-button-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-2Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-popular-2">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">Naruto Shippuden</h1>
+                        <h2 class="modal-categories">Anime</h2>
+                        <p class="modal-description">
+                          Twelve years before the start of the series, the Nine-Tails attacked Konohagakure destroying much of the village and taking many lives. The leader of the village, the Fourth Hokage, sacrificed his life to seal the
+                          Nine-Tails into a newborn, Naruto Uzumaki. Orphaned by the attack, Naruto was shunned by the villagers, who out of fear and anger, viewed him as the Nine-Tails itself. Though the Third Hokage outlawed speaking
+                          about anything related to the Nine-Tails, the children — taking their cues from their parents — inherited the same animosity towards Naruto. In his thirst to be acknowledged, Naruto vowed he would one day become
+                          the greatest Hokage the village had ever seen.
+                        </p>
+                        <p class="modal-cast">Cast: Junko Takeuchi, Chie Nakamura, Kazuhiko Inoue</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-3">
                   <div class="card-img-overlay card-popular-thumb-3">
                     <h1 class="card-title">Stranger Things</h1>
                     <p class="card-text">Series</p>
                   </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="popular-modal-button-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-3Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-popular-3">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">Stranger Things</h1>
+                        <h2 class="modal-categories">Series</h2>
+                        <p class="modal-description">
+                          It's been eight months since the Battle of Starcourt, which brought terror and destruction to Hawkins. Struggling with the aftermath, our group of friends are separated for the first time - and navigating the
+                          complexities of high school hasn't made things easier. In this most vulnerable time, a new and horrifying supernatural threat surfaces, presenting a gruesome mystery, that if solved, might finally put an end to the
+                          horrors of the Upside Down.
+                        </p>
+                        <p class="modal-cast">Director: The Duffer Brothers</p>
+                        <p class="modal-cast">Cast: Winona Ryder, David Harbour, Millie Bobby Brown</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-4">
                   <div class="card-img-overlay card-popular-thumb-4">
                     <h1 class="card-title">Sword Art Online</h1>
                     <p class="card-text">Anime</p>
                   </div>
                 </div>
-              </div>
-              <div class="carousel-item" data-bs-interval="4000">
-                <div class="card text-bg-dark">
-                  <div class="card-img-overlay card-popular-thumb-5">
-                    <h1 class="card-title">Ghost Doctor</h1>
-                    <p class="card-text">Series</p>
+                <!-- Modal -->
+                <div class="modal fade" id="popular-modal-button-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-4Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-popular-4">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">Sword Art Online</h1>
+                        <h2 class="modal-categories">Anime</h2>
+                        <p class="modal-description">
+                          The year is 2022, and gamers have lined up on launch day for Sword Art Online, a hotly-anticipated MMORPG that lets players connect to an immersive virtual reality world with special helmets called Nerve Gear.
+                          Kirito is one such gamer who's eager to jump back into action, having spent a great deal of time as a beta tester, and quickly becomes friends with newbie warrior Klein. But soon, Sword Art Online's 10,000 players
+                          discover that not only are they unable to log out, the only way they can return to their physical bodies is by beating the 100-level tower's final boss - death in the game means death in the real world. Now, with
+                          no one else to turn to, Kirito and the other participants must survive the game as best they can.
+                        </p>
+                        <p class="modal-cast">Cast: Yoshitsugu Matsuoka, Haruka Tomatsu, Ayana Taketatsu</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-5">
+                  <div class="card-img-overlay card-popular-thumb-5">
+                    <h1 class="card-title">Ghost Doctor</h1>
+                    <p class="card-text">K Drama</p>
+                  </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="popular-modal-button-5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-5Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-popular-5">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">Ghost Doctor</h1>
+                        <h2 class="modal-categories">K Drama</h2>
+                        <p class="modal-description">
+                          Cha Young Min is a genius doctor, with excelling skills at surgery, but he is arrogant and selfish. The arrogant and cold-blooded doctor only cares about his career and doesn't care about any of his patient's
+                          personal stories. One day, he gets involved in an accident and due to this, his spirit possesses another doctor's body, Seung Tak. Seung Tak is the luckiest and richest resident doctor whose grandfather is the
+                          founder of Myung-shin hospital and whose mother is the chairman of the hospital. Never wanting to be a good doctor, he becomes possessed by a ghost doctor. These two doctors are complete opposites, with opposite
+                          personalities and medical abilities.
+                        </p>
+                        <p class="modal-cast">Director: Jung Ji-hoon, Kim Beom, Uie</p>
+                        <p class="modal-cast">Cast: Boo Sung-chul, Kim Yeong-hwan, Kim Seon-su</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-6">
                   <div class="card-img-overlay card-popular-thumb-6">
                     <h1 class="card-title">The Big Bang Theory</h1>
                     <p class="card-text">Series</p>
                   </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="popular-modal-button-6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-6Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-popular-6">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">The Big Bang Theory</h1>
+                        <h2 class="modal-categories">Series</h2>
+                        <p class="modal-description">
+                          Leonard Hofstadter and Sheldon Cooper are both brilliant physicists working at Cal Tech in Pasadena, California. They are colleagues, best friends, and roommates, although in all capacities their relationship is
+                          always tested primarily by Sheldon's regimented, deeply eccentric, and non-conventional ways. They are also friends with their Cal Tech colleagues mechanical engineer Howard Wolowitz and astrophysicist Rajesh
+                          Koothrappali. The foursome spend their time working on their individual work projects, playing video games, watching science-fiction movies, or reading comic books. As they are self-professed nerds, all have little
+                          or no luck with women. When Penny, a pretty woman and an aspiring actress from Omaha, moves into the apartment across the hall from Leonard and Sheldon's, Leonard has another aspiration in life, namely to get Penny
+                          to be his girlfriend.
+                        </p>
+                        <p class="modal-cast">Director: Chuck Lorre, Bill Prady</p>
+                        <p class="modal-cast">Cast: Johnny Galecki, Jim Parsons, Kaley Cuoco</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-7">
                   <div class="card-img-overlay card-popular-thumb-7">
                     <h1 class="card-title">Breaking Bad</h1>
                     <p class="card-text">Series</p>
+                  </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="popular-modal-button-7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-7Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-popular-7">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">Breaking Bad</h1>
+                        <h2 class="modal-categories">Series</h2>
+                        <p class="modal-description">
+                          Walter H. White is a chemistry genius, but works as a chemistry teacher in an Albequerque, New Mexico high school. His life drastically changes when he's diagnosed with stage III terminal lung cancer, and given a
+                          short amount of time left to live: a mere matter of months. To ensure his handicapped son and his pregnant wife have a financial future, Walt uses his chemistry background to create and sell the world's finest
+                          crystal methamphetamine. To sell his signature "blue meth," he teams up with Jesse Pinkman, a former student of his. The meth makes them very rich very quickly, but it attracts the attention of his DEA brother in
+                          law Hank. As Walt and Jesse's status in the drug world escalates, Walt becomes a dangerous criminal and Jesse becomes a hot-headed salesman. Hank is always hot on his tail, and it forces Walt to come up with new
+                          ways to cover his tracks.
+                        </p>
+                        <p class="modal-cast">Director: Vince Gilligan</p>
+                        <p class="modal-cast">Cast: Bryan Cranston, Aaron Paul, Anna Gunn</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -171,58 +387,248 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#new-modal-button-1">
                   <div class="card-img-overlay card-new-thumb-1">
                     <h1 class="card-title">Wednesday</h1>
                     <p class="card-text">Series</p>
                   </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="new-modal-button-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="new-modal-button-1Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-new-1">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">Wednesday</h1>
+                        <h2 class="modal-categories">Series</h2>
+                        <p class="modal-description">
+                          A sleuthing, supernaturally infused mystery charting Wednesday Addams' years as a student at Nevermore Academy. Wednesday's attempts to master her emerging psychic ability, thwart a monstrous killing spree that has
+                          terrorized the local town, and solve the supernatural mystery that embroiled her parents 25 years ago - all while navigating her new and very tangled relationships at Nevermore.
+                        </p>
+                        <p class="modal-cast">Director: Alfred Gough</p>
+                        <p class="modal-cast">Cast: Jenna Ortega, Gwendoline Christie, Riki Lindhome</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#new-modal-button-2">
                   <div class="card-img-overlay card-new-thumb-2">
                     <h1 class="card-title">Blue Lock</h1>
                     <p class="card-text">Anime</p>
                   </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="new-modal-button-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="new-modal-button-2Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-new-2">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">Blue Lock</h1>
+                        <h2 class="modal-categories">Anime</h2>
+                        <p class="modal-description">
+                          After failing to win the World Cup, there's unrest in the Japanese Soccer community. Many of the older patrons of the sport aren't too disturbed by the lack of trophies, but newcomer Anri Teiri is furious – and
+                          she's determined to fix what she sees as the problem with Japanese players. To that end she hires maverick trainer Jinpachi Ego, who devises a strange yet rigorous plan: he takes the three hundred best young soccer
+                          players in the country, sends them to a state-of-the-art training facility, and whittles them down until he has the absolute best striker in the nation. Yoichi Isagi is one of the boys chosen for the camp. He may
+                          be number 299 out of 300, but nothing – and no one – is going to stand in his way of coming out on top.
+                        </p>
+                        <p class="modal-cast">Cast: Kazuki Ura, Tasuku Kaito, Yuki Ono</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#new-modal-button-3">
                   <div class="card-img-overlay card-new-thumb-3">
                     <h1 class="card-title">Alice in Borderlands</h1>
                     <p class="card-text">Series</p>
                   </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="new-modal-button-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="new-modal-button-3Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-new-3">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">Alice in Borderlands</h1>
+                        <h2 class="modal-categories">Series</h2>
+                        <p class="modal-description">
+                          A jobless young man, Ryohei Arisu/Alice (Kento Yamazaki), is rebuked by his father and brother for skipping job interviews and playing video games instead. Arisu leaves the house in anger and texts his licentious
+                          friends, Chota and Karube. While on a city stroll, the three friends enjoy moments of happiness on the road, unaware of their chaotic surroundings. As the moment ends, they find themselves surrounded by traffic
+                          honing. Arisu, Chota and Karube create chaos on the signal and thus to avoid police, they hide inside a public toilet. Though, when they come out, everything is silent as death. Arisu, Chota, and Karube travel into
+                          a new fantasy world where they have to play survival games to earn visas or life until it ends and the next game awaits. Arisu who is an ardent obsessed gamer easily cracks the algorithm of the game and trickery of
+                          the game master, however, sometimes in a survival game, the winner could be only one. Arisu is deemed to make certain hard choices, which leads to a situation where he has to sacrifice his friends and loved ones.
+                          His constant struggle is to learn about this new world and quickly come out of it before the game ends his own life. After the initial premise builds up, the consecutive episodes explore other characters trapped
+                          inside Borderland, where Arisu interacts with them and understands the workings of the set-up.
+                        </p>
+                        <p class="modal-cast">Cast: Kento Yamazaki, Tao Tsuchiya, Nijiro Murakami</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#new-modal-button-4">
                   <div class="card-img-overlay card-new-thumb-4">
                     <h1 class="card-title">Spy X Family</h1>
                     <p class="card-text">Anime</p>
                   </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="new-modal-button-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="new-modal-button-4Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-new-4">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">Spy X Family</h1>
+                        <h2 class="modal-categories">Anime</h2>
+                        <p class="modal-description">
+                          For the agent known as "Twilight," no order is too tall if it is for the sake of peace. Operating as Westalis' master spy, Twilight works tirelessly to prevent extremists from sparking a war with neighboring
+                          country Ostania. For his latest mission, he must investigate Ostanian politician Donovan Desmond by infiltrating his son's school: the prestigious Eden Academy. Thus, the agent faces the most difficult task of his
+                          career: get married, have a child, and play family. Twilight, or "Loid Forger" quickly adopts the unassuming orphan Anya to play the role of a six-year-old daughter and prospective Eden Academy student. For a wife,
+                          he comes across Yor Briar, an absent-minded office worker who needs a pretend partner of her own to impress her friends. However, Loid is not the only one with a hidden nature. Yor moonlights as the lethal assassin
+                          "Thorn Princess" For her, marrying Loid creates the perfect cover. Meanwhile, Anya is not the ordinary girl she appears to be; she is an esper, the product of secret experiments that allow her to read minds.
+                          Although she uncovers their true identities, Anya is thrilled that her new parents are cool secret agents! She would never tell them, of course. That would ruin the fun. Under the guise of "The Forgers," the spy,
+                          the assassin, and the esper must act as a family while carrying out their own agendas. Although these liars and misfits are only playing parts, they soon find that family is about far more than blood relations.
+                        </p>
+                        <p class="modal-cast">Cast: Takuya Eguchi, Atsumi Tanezaki, Saori Hayami</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#new-modal-button-5">
                   <div class="card-img-overlay card-new-thumb-5">
                     <h1 class="card-title">Lookism</h1>
                     <p class="card-text">Series</p>
                   </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="new-modal-button-5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="new-modal-button-5Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-new-5">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">Lookism</h1>
+                        <h2 class="modal-categories">Series</h2>
+                        <p class="modal-description">
+                          Lookism tells the story of an 'ugly' boy, Wen Shuai, who finally gets the courage to transfer after being bullied in his original school. He then discovers that he has two very different bodies. One is his original
+                          ugly body and the other is a handsome body. Wen Shuai finds out that he can switch between the two bodies. One body will appear when he's awake, and the other body will appear when he's sleeping. The secret of the
+                          two bodies completely changes Wen Shuai's life. He has never been welcomed and felt the beauty and convenience of being popular. But at the same time, this handsome body hides a huge secret. When the original owner
+                          of the handsome body, Kris, wakes up, the layers of the mystery begin to unravel.
+                        </p>
+                        <p class="modal-cast">Cast: Shim Kyu-Hyuck, Han Shin, Ryu Seung-gone</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#new-modal-button-6">
                   <div class="card-img-overlay card-new-thumb-6">
                     <h1 class="card-title">Uncharted</h1>
                     <p class="card-text">Movie</p>
                   </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="new-modal-button-6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="new-modal-button-6Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-new-6">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">Uncharted</h1>
+                        <h2 class="modal-categories">Movie</h2>
+                        <p class="modal-description">
+                          Street-smart Nathan Drake is recruited by seasoned treasure hunter Victor "Sully" Sullivan to recover a fortune amassed by Ferdinand Magellan and lost 500 years ago by the House of Moncada. What starts as a heist
+                          job for the duo becomes a globe-trotting, white-knuckle race to reach the prize before the ruthless Santiago Moncada, who believes he and his family are the rightful heirs. If Nate and Sully can decipher the clues
+                          and solve one of the world's oldest mysteries, they stand to find $5 billion in treasure and perhaps even Nate's long-lost brother...but only if they can learn to work together.
+                        </p>
+                        <p class="modal-cast">Director: Ruben Fleischer</p>
+                        <p class="modal-cast">Cast: Tom Holland, Mark Wahlberg, Antonio Banderas</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <div class="card text-bg-dark">
+                <!-- Button trigger modal for Showcase Section-->
+                <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#new-modal-button-7">
                   <div class="card-img-overlay card-new-thumb-7">
                     <h1 class="card-title">Jujutsu Kaisen 0</h1>
                     <p class="card-text">Movie</p>
+                  </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="new-modal-button-7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="new-modal-button-7Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header modal-header-new-7">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                        <h1 class="modal-title">Jujutsu Kaisen 0</h1>
+                        <h2 class="modal-categories">Movie</h2>
+                        <p class="modal-description">
+                          Yuuta Okkotsu is haunted. Ever since his childhood friend Rika died in a traffic accident, her ghost has stuck with him. But her spirit does not appear as the sweet girl Yuuta once knew. Instead, she manifests as a
+                          monstrous and powerful entity who fiercely protects him. Unable to control Rika's violent behavior, Yuuta is helpless to stop the bloodshed that follows from her brutal vengeance. As a result, when apprehended by
+                          "Jujutsu" sorcerers--the secret guardians of the world, trained to combat forces like Rika--Yuuta wishes to be completely isolated so that no one else can get hurt. Yet his apprehender, the master sorcerer Satoru
+                          Gojou, has different plans for him: he will join Jujutsu High School and learn to control Rika in order to help people. Now a first-year at this school, Yuuta starts to learn Jujutsu arts and combat malignant
+                          beings. Alongside his new classmates Maki Zenin, a Jujutsu weapons expert; Toge Inumaki, a spellcaster who uses his words as weapons; and Panda, a seemingly walking and talking panda bear, Yuuta begins to find his
+                          place in the world and, for once, to feel comfortable with his abilities. However, as his training progresses, Yuuta comes to learn that the dangers of the Jujutsu world go far beyond that of wicked spirits.
+                        </p>
+                        <p class="modal-cast">Director: Park Seong-hu</p>
+                        <p class="modal-cast">Cast: Megumi Ogata, Yuichi Nakamura, Koki Uchiyama</p>
+                        <div class="modal-body-button">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Watch Now!</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -239,7 +645,7 @@
         </div>
       </div>
     </div>
-    <!-- End of Trending Section -->
+    <!-- End of Movies Section -->
 
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
