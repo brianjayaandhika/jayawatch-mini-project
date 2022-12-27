@@ -76,7 +76,7 @@ body {
 .img-col img {
   width: 35rem;
   border-radius: 15px;
-  box-shadow: 1px 1px 10px #ccc;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.4);
 }
 
 .display-title {
@@ -97,7 +97,7 @@ body {
 .display-description {
   font-family: "Poppin";
   font-size: 1.4rem;
-  width: 31rem;
+  width: 100%;
   color: white;
 }
 
@@ -245,6 +245,10 @@ body {
   opacity: 1;
 }
 
+.carousel-inner {
+  box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.1);
+}
+
 .carousel-control-prev,
 .carousel-control-next,
 .carousel-item,
@@ -375,6 +379,79 @@ body {
 }
 
 /* End of Styles - Movies */
+
+/* Styles - Categories */
+.section-title {
+  font-family: "Kanit";
+  color: white;
+  margin-bottom: 1.5625rem;
+}
+
+.btn-categories {
+  width: 400px;
+  aspect-ratio: 4 / 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  border: 0;
+  border-radius: 10px;
+  opacity: 0.8;
+  transition: opacity 1s, transform 0.75s, justify-content 1s;
+}
+
+.btn-categories:hover {
+  opacity: 1;
+  transform: scale(1.05) rotate(0.2deg);
+  justify-content: start;
+}
+
+.btn-categories:hover > h1 {
+  font-size: 1.6rem;
+  letter-spacing: 1.2px;
+  align-self: flex-start;
+}
+
+.text-categories {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  font-family: "Poppin";
+}
+
+.btn-categories-anime {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/anime.webp);
+}
+.btn-categories-series {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/series.webp);
+}
+.btn-categories-kDrama {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/kDrama.webp);
+}
+.btn-categories-horror {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/horror.webp);
+}
+.btn-categories-action {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/action.webp);
+}
+.btn-categories-documentaries {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/documentaries.webp);
+}
+.btn-categories-superheroes {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/superheroes.webp);
+}
+.btn-categories-musical {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/musical.webp);
+}
+.btn-categories-comedy {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/comedy.webp);
+}
+/* End of Styles - Categories */
+
+/* Styles - Footer */
+/* End of Styles - Footer */
 
 /* Media Queries */
 
