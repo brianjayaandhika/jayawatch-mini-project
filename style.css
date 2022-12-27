@@ -104,18 +104,77 @@ body {
 /* End of Styles - Showcase */
 
 /* Styles - Modal */
+
+.modal {
+  --bs-modal-width: 41.25rem;
+}
+
 .modal-content {
   background-color: black;
   color: white;
-  width: 43.75rem;
+  width: 41rem;
 }
 
 .modal-header {
-  height: 31.25rem;
+  height: 28rem;
   border-bottom: 0 !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
+}
+
+.modal-header button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba(255,255,255,1)'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
+    center/1em auto no-repeat;
+}
+
+.modal-body {
+  margin-top: -10.625rem;
+}
+
+.modal-title {
+  font-size: 2rem;
+  line-height: 3.0625rem;
+  font-weight: 700;
+  color: white;
+  font-family: "Poppin";
+  text-align: start;
+}
+
+.modal-categories {
+  font-size: 1.2rem;
+  color: rgba(214, 210, 210, 0.812);
+  margin-bottom: 2rem;
+  font-family: "Poppin";
+  margin-bottom: 0.9375rem;
+  text-align: start;
+}
+
+.modal-description {
+  font-family: "Poppin";
+  font-size: 1.2rem;
+  color: white;
+  line-height: 2.4375rem;
+  width: 100%;
+  text-align: start;
+}
+
+.modal-cast {
+  font-family: "Poppin";
+  font-size: 1.1rem;
+  width: 41rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1rem;
+  text-align: start;
+}
+
+.modal-body-button {
+  display: flex;
+  gap: 0.9375rem;
+  justify-content: end;
 }
 
 .modal-header-showcase {
@@ -162,56 +221,6 @@ body {
 }
 .modal-header-new-7 {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/thumbnail/New/thumbnail-7.webp);
-}
-
-.modal-header button {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba(255,255,255,1)'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
-    center/1em auto no-repeat;
-}
-
-.modal-body {
-  margin-top: -10.625rem;
-}
-
-.modal-title {
-  font-size: 2rem;
-  line-height: 3.0625rem;
-  font-weight: 700;
-  color: white;
-  font-family: "Poppin";
-}
-
-.modal-categories {
-  font-size: 1.2rem;
-  color: rgba(214, 210, 210, 0.812);
-  margin-bottom: 2rem;
-  font-family: "Poppin";
-  margin-bottom: 0.9375rem;
-}
-
-.modal-description {
-  font-family: "Poppin";
-  font-size: 1.2rem;
-  width: 41rem;
-  color: white;
-  line-height: 2.4375rem;
-}
-
-.modal-cast {
-  font-family: "Poppin";
-  font-size: 1.1rem;
-  width: 41rem;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1rem;
-}
-
-.modal-body-button {
-  display: flex;
-  gap: 0.9375rem;
-  justify-content: end;
 }
 
 /* End of Styles - Modal */
@@ -369,14 +378,16 @@ body {
 
 /* Media Queries */
 
-/* Large Breakpoint */
-@media only screen and (max-width: 1200px) {
+/* Extra Large Breakpoint */
+@media only screen and (max-width: 1199px) {
   body {
     background-color: pink;
   }
   /* Nav */
 
   /* Showcase */
+
+  /* Movies */
 }
 
 /* Large Breakpoint */
@@ -399,7 +410,6 @@ body {
   body {
     background-color: salmon;
   }
-  /* Nav */
   /* Nav */
   .nav-signIn {
     display: none;
@@ -449,6 +459,19 @@ body {
   .display-categories {
     margin-bottom: 0.9375rem;
   }
+
+  /* Movies */
+
+  /* Modal */
+  .modal-content {
+    background-color: black;
+    color: white;
+    width: 35rem;
+  }
+
+  .modal {
+    --bs-modal-width: 35.25rem;
+  }
 }
 
 /* Small Breakpoint */
@@ -484,4 +507,21 @@ body {
   }
 
   /* Showcase */
+
+  /* Movies */
+
+  /* Modal */
+  .modal-content {
+    background-color: black;
+    color: white;
+    width: 30rem;
+  }
+
+  .modal {
+    --bs-modal-margin: 2.907rem;
+  }
+  .modal-description {
+    height: 235px;
+    overflow: hidden;
+  }
 }
