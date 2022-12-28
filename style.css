@@ -37,6 +37,7 @@ body {
   font-size: 1.3rem;
   color: white;
   font-family: "Poppin";
+  opacity: 0.9;
 }
 
 .nav-signIn {
@@ -44,6 +45,7 @@ body {
   color: white;
   font-size: 1.3rem;
   font-family: "Poppin";
+  opacity: 0.9;
 }
 
 .dropdown-toggle::after {
@@ -99,6 +101,7 @@ body {
   font-size: 1.4rem;
   width: 100%;
   color: white;
+  opacity: 0.9;
 }
 
 /* End of Styles - Showcase */
@@ -230,19 +233,27 @@ body {
   font-family: "Kanit";
   color: white;
   margin-bottom: 1.5625rem;
+  opacity: 0.9;
 }
 
 .card {
-  width: fit-content;
+  width: 100%;
+  aspect-ratio: 5 / 4;
   border-radius: 1.5625rem;
   opacity: 0.8;
   transition: 0.75s;
   overflow: hidden;
+  background-position: center;
 }
 
 .card:hover {
   transform: scale(1.02);
   opacity: 1;
+}
+
+.card-img-overlay {
+  width: 500px !important;
+  height: 400px !important;
 }
 
 .carousel-inner {
@@ -264,6 +275,7 @@ body {
   background-size: cover;
   position: relative;
 }
+
 .card-popular-thumb-2 {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(images/thumbnail/Popular/thumbnail-2.webp);
   background-position: center;
@@ -369,7 +381,7 @@ body {
 }
 
 .card-img-overlay h1 {
-  font-size: 1.8rem;
+  font-size: 2em;
   line-height: 2rem;
 }
 
@@ -385,10 +397,11 @@ body {
   font-family: "Kanit";
   color: white;
   margin-bottom: 1.5625rem;
+  opacity: 0.9;
 }
 
 .btn-categories {
-  width: 400px;
+  width: 375px;
   aspect-ratio: 4 / 2;
   display: flex;
   align-items: flex-start;
@@ -436,8 +449,8 @@ body {
 .btn-categories-action {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/action.webp);
 }
-.btn-categories-documentaries {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/documentaries.webp);
+.btn-categories-mystery {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/mystery.webp);
 }
 .btn-categories-superheroes {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/superheroes.webp);
@@ -448,9 +461,38 @@ body {
 .btn-categories-comedy {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(images/categories/comedy.webp);
 }
+
+.categories-or {
+  font-family: "Kanit";
+  color: white;
+  margin-bottom: 1.5625rem;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.categories-other {
+  font-family: "Kanit";
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 1.5625rem;
+  font-size: 3rem;
+}
+
+.categories-other > a {
+  color: var(--bs-yellow);
+}
+
 /* End of Styles - Categories */
 
 /* Styles - Footer */
+.footer-section {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(252, 244, 4, 1)), url(images/categories/anime.webp);
+}
+
+.footer-form-text {
+  opacity: 0.9;
+}
+
 /* End of Styles - Footer */
 
 /* Media Queries */
@@ -465,6 +507,15 @@ body {
   /* Showcase */
 
   /* Movies */
+
+  /* Categories */
+  .btn-categories {
+    width: 300px;
+  }
+
+  .text-categories {
+    font-size: 2rem;
+  }
 }
 
 /* Large Breakpoint */
@@ -480,6 +531,10 @@ body {
     width: 100%;
     min-width: 21rem;
   }
+
+  /* Movies */
+
+  /* Categories */
 }
 
 /* Medium Breakpoint */
@@ -549,6 +604,31 @@ body {
   .modal {
     --bs-modal-width: 35.25rem;
   }
+
+  /* Categories */
+  .btn-categories-superheroes {
+    display: none;
+  }
+  .btn-categories-musical {
+    display: none;
+  }
+  .btn-categories-comedy {
+    display: none;
+  }
+
+  .btn-categories {
+    width: 300px;
+  }
+
+  .btn-categories:hover > h1 {
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+    align-self: flex-start;
+  }
+
+  .text-categories {
+    font-size: 2rem;
+  }
 }
 
 /* Small Breakpoint */
@@ -587,11 +667,26 @@ body {
 
   /* Movies */
 
+  .card-img-overlay {
+    width: 21.875rem !important;
+    height: 21.875rem !important;
+  }
+
+  .card-img-overlay h1 {
+    font-size: 1.6em;
+    line-height: 2rem;
+  }
+
+  .card-img-overlay p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+
   /* Modal */
   .modal-content {
     background-color: black;
     color: white;
-    width: 30rem;
+    width: 100%;
   }
 
   .modal {
@@ -600,5 +695,40 @@ body {
   .modal-description {
     height: 235px;
     overflow: hidden;
+  }
+
+  .modal-description {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: start;
+  }
+
+  .modal-cast {
+    font-family: "Poppin";
+    font-size: 1.1rem;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: start;
+    line-height: 2rem;
+  }
+
+  /* Categories */
+
+  .btn-categories {
+    width: 235px;
+  }
+
+  .btn-categories:hover > h1 {
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+    align-self: flex-start;
+  }
+
+  .text-categories {
+    font-size: 1.6rem;
+  }
+
+  .categories-other {
+    margin: 0 10px;
   }
 }
