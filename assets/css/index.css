@@ -509,7 +509,15 @@ body {
 }
 
 .footer-form-text {
-  opacity: 0.9;
+  opacity: 1;
+}
+
+.footer-or {
+  font-family: "Kanit";
+  color: white;
+  margin-bottom: 1.5625rem;
+  font-size: 2rem;
+  opacity: 1;
 }
 
 .contact-logo > a {
@@ -539,7 +547,7 @@ body {
 .footer-item a {
   font-family: "Kanit";
   color: white;
-  opacity: 0.8;
+  opacity: 0.9;
   font-size: 1.3rem;
   text-decoration: none;
 }
