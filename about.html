@@ -42,7 +42,8 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <button type="submit" class="btn btn-white nav-signIn">Sign in</button>
+                  <!-- Modal Sign In Button -->
+                  <button type="submit" class="btn btn-white nav-signIn" data-bs-toggle="modal" data-bs-target="#signIn-modal">Sign in</button>
                 </li>
               </ul>
             </div>
@@ -50,6 +51,42 @@
         </div>
       </div>
     </nav>
+    <!-- Sign in Modal -->
+    <div class="modal fade" id="signIn-modal" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="signIn-modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content d-flex justify-content-center align-items-center">
+          <!-- Sign-in Area -->
+          <div class="container signInArea d-flex flex-column p-4">
+            <div class="signInTitle d-flex justify-content-between">
+              <span>Sign in</span>
+              <button class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div>
+              <input type="text" placeholder="Enter phone number or email address" class="registInput form-control" />
+              <input type="password" placeholder="Enter password" class="registInput form-control" />
+            </div>
+            <div class="form-check form-switch switchCheckbox">
+              <input type="checkbox" class="form-check-input" />
+              <label class="form-check-label"> Keep me Signed In </label>
+            </div>
+            <div>
+              <button class="signInBtn btn p-3">Sign In</button>
+            </div>
+            <div>
+              <button class="signUpBtn btn btn-link p-3">Sign Up</button>
+            </div>
+            <div class="or">or</div>
+            <div class="d-flex flex-column">
+              <button class="btn btn-light mb-3 p-3 btnContinue"><i class="bi bi-google"></i> Continue with Google</button>
+              <button class="btn btn-light mb-3 p-3 btnContinue"><i class="bi bi-facebook"></i> Continue with Facebook</button>
+              <button class="btn btn-light p-3 btnContinue"><i class="bi bi-apple"></i> Continue with Apple</button>
+            </div>
+          </div>
+          <!-- End of Sign-in Area -->
+        </div>
+      </div>
+    </div>
+    <!-- End of Sign in Modal -->
     <!-- End of Navigation -->
 
     <!-- Breadcrumbs Section -->
