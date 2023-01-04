@@ -38,7 +38,7 @@
                     <li><a href="#" class="dropdown-item" target="_blank" style="color: black">About</a></li>
                     <li><a href="categories.html" class="dropdown-item" target="_blank" style="color: black">Categories</a></li>
                     <li><a href="#" class="dropdown-item" target="_blank" style="color: black">Settings</a></li>
-                    <li><a href="#" class="dropdown-item dropdown-signIn" style="color: black; display: none">Sign In</a></li>
+                    <li><a href="#" class="dropdown-item dropdown-signIn" data-bs-toggle="modal" data-bs-target="#signIn-modal" style="color: black; display: none">Sign In</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
@@ -59,7 +59,7 @@
           <div class="container signInArea d-flex flex-column p-4">
             <div class="signInTitle d-flex justify-content-between">
               <span>Sign in</span>
-              <button class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button class="btn btn-close btn-close-signIn" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div>
               <input type="text" placeholder="Enter phone number or email address" class="registInput form-control" />
@@ -94,7 +94,7 @@
       <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item inactive-breadcrumb"><a href="index.html" target="_blank">Home</a></li>
-          <li class="breadcrumb-item active active-breadcrumb" aria-current="page">Library</li>
+          <li class="breadcrumb-item active active-breadcrumb" aria-current="page">About</li>
         </ol>
       </nav>
     </section>

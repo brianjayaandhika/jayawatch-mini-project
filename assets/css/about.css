@@ -48,6 +48,12 @@ body {
   opacity: 0.9;
 }
 
+.nav-signIn:hover,
+.search-btn:hover,
+#dropdown-menu:hover > .dropdown-toggle {
+  opacity: 0.6;
+}
+
 .dropdown-toggle::after {
   display: none;
 }
@@ -139,11 +145,31 @@ body {
   line-height: 18px;
 }
 
-.btn-close {
+.btn-close-signIn {
   background: transparent
     url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
     center/1em auto no-repeat;
   opacity: 0.9;
+}
+
+.modal {
+  --bs-modal-width: 41.25rem;
+}
+
+.modal-content {
+  background-color: black;
+  color: white;
+  width: 41rem;
+}
+
+.modal-body {
+  margin-top: -10.625rem;
+}
+
+.modal-body-button {
+  display: flex;
+  gap: 0.9375rem;
+  justify-content: end;
 }
 
 /* End of Sign in Modal */
@@ -249,9 +275,13 @@ body {
 .footer-item a {
   font-family: "Kanit";
   color: white;
-  opacity: 0.9;
+  opacity: 0.67;
   font-size: 1.3rem;
   text-decoration: none;
+}
+
+.footer-item a:hover {
+  opacity: 1;
 }
 
 .left-col {
@@ -289,18 +319,11 @@ body {
 
 /* Extra Large Breakpoint */
 @media only screen and (max-width: 74.9375rem) {
-  body {
-    /* background-color: pink; */
-  }
-
   /* Nav */
 }
 
 /* Large Breakpoint */
 @media only screen and (max-width: 61.9375rem) {
-  body {
-    /* background-color: orange; */
-  }
   /* Nav */
 
   /* Profile */
@@ -320,9 +343,6 @@ body {
 
 /* Medium Breakpoint */
 @media only screen and (max-width: 47.9375rem) {
-  body {
-    /* background-color: lightgreen; */
-  }
   /* Nav */
   .nav-signIn {
     display: none;
@@ -392,9 +412,6 @@ body {
 
 /* Small Breakpoint */
 @media only screen and (max-width: 35.9375rem) {
-  body {
-    /* background-color: gold; */
-  }
   /* Nav */
   .nav-signIn {
     display: none;

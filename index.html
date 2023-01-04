@@ -38,7 +38,7 @@
                     <li><a href="about.html" target="_blank" class="dropdown-item" style="color: black">About</a></li>
                     <li><a href="categories.html" target="_blank" class="dropdown-item" style="color: black">Categories</a></li>
                     <li><a href="#" class="dropdown-item" style="color: black">Settings</a></li>
-                    <li><a href="#" class="dropdown-item dropdown-signIn" style="color: black; display: none">Sign In</a></li>
+                    <li><a href="#" class="dropdown-item dropdown-signIn" data-bs-toggle="modal" data-bs-target="#signIn-modal" style="color: black; display: none">Sign In</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
@@ -59,7 +59,7 @@
           <div class="container signInArea d-flex flex-column p-4">
             <div class="signInTitle d-flex justify-content-between">
               <span>Sign in</span>
-              <button class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button class="btn btn-close btn-close-signIn" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div>
               <input type="text" placeholder="Enter phone number or email address" class="registInput form-control" />
@@ -303,7 +303,7 @@
                 <div class="card text-bg-dark display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-5">
                   <div class="card-img-overlay card-popular-thumb-5">
                     <h1 class="card-title">Ghost Doctor</h1>
-                    <p class="card-text">K Drama</p>
+                    <p class="card-text">Drama</p>
                   </div>
                 </div>
                 <!-- Modal -->
@@ -315,7 +315,7 @@
                       </div>
                       <div class="modal-body d-flex flex-column">
                         <h1 class="modal-title">Ghost Doctor</h1>
-                        <h2 class="modal-categories">K Drama</h2>
+                        <h2 class="modal-categories">Drama</h2>
                         <p class="modal-description">
                           Cha Young Min is a genius doctor, with excelling skills at surgery, but he is arrogant and selfish. The arrogant and cold-blooded doctor only cares about his career and doesn't care about any of his patient's
                           personal stories. One day, he gets involved in an accident and due to this, his spirit possesses another doctor's body, Seung Tak. Seung Tak is the luckiest and richest resident doctor whose grandfather is the
@@ -694,53 +694,53 @@
     <section class="categories container mt-5 mb-5">
       <h1 class="section-title text-center">Recommended Categories</h1>
       <div class="row mb-md-5 gy-4 gy-xl-5">
-        <div class="col-md-4 col-6 d-flex justify-content-sm-center justify-content-end">
-          <button class="btn btn-categories btn-categories-anime">
-            <h1 class="text-categories">Anime</h1>
-          </button>
-        </div>
-        <div class="col-md-4 col-6 d-flex justify-content-sm-center justify-content-start">
-          <button class="btn btn-categories btn-categories-series">
-            <h1 class="text-categories">Series</h1>
-          </button>
-        </div>
-        <div class="col-md-4 col-6 d-flex justify-content-sm-center justify-content-end">
-          <button class="btn btn-categories btn-categories-kDrama">
-            <h1 class="text-categories">K-Drama</h1>
-          </button>
-        </div>
-        <div class="col-md-4 col-6 d-flex justify-content-sm-center justify-content-start">
-          <button class="btn btn-categories btn-categories-horror">
-            <h1 class="text-categories">Horror</h1>
-          </button>
-        </div>
-        <div class="col-md-4 col-6 d-flex justify-content-sm-center justify-content-end">
+        <div class="col-md-4 col-6 d-flex">
           <button class="btn btn-categories btn-categories-action">
             <h1 class="text-categories">Action</h1>
           </button>
         </div>
-        <div class="col-md-4 col-6 d-flex justify-content-sm-center justify-content-start">
-          <button class="btn btn-categories btn-categories-mystery">
-            <h1 class="text-categories">Mystery</h1>
+        <div class="col-md-4 col-6 d-flex">
+          <button class="btn btn-categories btn-categories-anime">
+            <h1 class="text-categories">Anime</h1>
           </button>
         </div>
-        <div class="col-md-4 col-6 d-flex justify-content-sm-center justify-content-end">
-          <button class="btn btn-categories btn-categories-superheroes">
-            <h1 class="text-categories">Heroes</h1>
-          </button>
-        </div>
-        <div class="col-md-4 col-6 d-flex justify-content-sm-center justify-content-start">
-          <button class="btn btn-categories btn-categories-musical">
-            <h1 class="text-categories">Musical</h1>
-          </button>
-        </div>
-        <div class="col-md-4 col-6 d-flex justify-content-sm-center justify-content-end">
+        <div class="col-md-4 col-6 d-flex">
           <button class="btn btn-categories btn-categories-comedy">
             <h1 class="text-categories">Comedy</h1>
           </button>
         </div>
+        <div class="col-md-4 col-6 d-flex">
+          <button class="btn btn-categories btn-categories-kDrama">
+            <h1 class="text-categories">Drama</h1>
+          </button>
+        </div>
+        <div class="col-md-4 col-6 d-flex">
+          <button class="btn btn-categories btn-categories-horror">
+            <h1 class="text-categories">Horror</h1>
+          </button>
+        </div>
+        <div class="col-md-4 col-6 d-flex">
+          <button class="btn btn-categories btn-categories-musical">
+            <h1 class="text-categories">Musical</h1>
+          </button>
+        </div>
+        <div class="col-md-4 col-6 d-flex">
+          <button class="btn btn-categories btn-categories-mystery">
+            <h1 class="text-categories">Mystery</h1>
+          </button>
+        </div>
+        <div class="col-md-4 col-6 d-flex">
+          <button class="btn btn-categories btn-categories-series">
+            <h1 class="text-categories">Series</h1>
+          </button>
+        </div>
+        <div class="col-md-4 col-6 d-flex">
+          <button class="btn btn-categories btn-categories-superheroes">
+            <h1 class="text-categories">Superhero</h1>
+          </button>
+        </div>
       </div>
-      <h1 class="categories-or text-center">Or</h1>
+      <h1 class="categories-or mt-3 mt-md-0 text-center">Or</h1>
       <h1 class="categories-other text-center">Check Other <a href="categories.html">Categories!</a></h1>
     </section>
     <!-- End of Categories Section -->

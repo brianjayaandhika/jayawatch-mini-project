@@ -48,10 +48,232 @@ body {
   opacity: 0.9;
 }
 
+.nav-signIn:hover,
+.search-btn:hover,
+#dropdown-menu:hover > .dropdown-toggle {
+  opacity: 0.6;
+}
+
 .dropdown-toggle::after {
   display: none;
 }
 /* End of Styles - Navigation */
+
+/* Sign in Area */
+
+.signInArea {
+  border-radius: 8px;
+  box-shadow: 1px 2px 5px 5px rgba(122, 121, 121, 0.241);
+}
+
+.signInTitle {
+  font-family: "Poppin";
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 41px;
+  color: var(--bs-yellow);
+}
+
+.registInput {
+  font-family: "Poppin";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1.5px solid black;
+}
+
+.switchCheckbox {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.signInBtn {
+  font-family: "Poppin";
+  font-weight: 500;
+  font-size: 1.15rem;
+  width: 100%;
+  border-radius: 8px;
+  color: var(--bs-yellow);
+  border: 2px solid var(--bs-yellow);
+  margin-bottom: 1rem;
+}
+
+.signUpBtn {
+  font-family: "Poppin";
+  font-size: 1.15rem;
+  width: 100%;
+  text-decoration: none;
+  background-color: var(--bs-yellow);
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.form-check-input:checked {
+  background-color: var(--bs-yellow);
+  border-color: var(--bs-yellow);
+}
+
+.or {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppin";
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.btnContinue {
+  font-family: "Kanit";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.btn-close-signIn {
+  background: transparent
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
+    center/1em auto no-repeat;
+  opacity: 0.9;
+}
+
+.modal {
+  --bs-modal-width: 41.25rem;
+}
+
+.modal-content {
+  background-color: black;
+  color: white;
+  width: 41rem;
+}
+
+.modal-body {
+  margin-top: -10.625rem;
+}
+
+.modal-body-button {
+  display: flex;
+  gap: 0.9375rem;
+  justify-content: end;
+}
+
+/* End of Sign in Modal */
+
+/* Styles - Breadcrumbs */
+.active-breadcrumb {
+  color: white !important;
+  font-size: 1.1rem;
+  font-family: "Poppin";
+  opacity: 0.9;
+}
+
+.active-breadcrumb::before {
+  --bs-breadcrumb-divider-color: white;
+}
+
+.inactive-breadcrumb a {
+  color: white !important;
+  font-size: 1.1rem;
+  font-family: "Poppin";
+  opacity: 0.7;
+}
+
+.profile-title {
+  font-family: "Kanit";
+  color: white;
+  opacity: 1;
+  margin-bottom: 1.5625rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.profile-text {
+  color: white;
+  font-family: "Poppin";
+  text-align: start;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  line-height: 2.25rem;
+}
+
+/* End of Styles - Breadcrumbs */
+
+/* Styles - Categories (categories.html) */
+
+.section-categories-title {
+  font-family: "Kanit";
+  color: white;
+  margin-bottom: 1.5625rem;
+  font-size: 2.4rem;
+  opacity: 1;
+  text-align: center;
+}
+
+.categories-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.categories-item {
+  list-style-type: none;
+}
+
+.categories-item-btn {
+  color: white;
+  font-family: "Kanit";
+  font-size: 2.3rem;
+  opacity: 1;
+  margin: 28px 36px;
+  transition: color 0.5s, background-color 0.3s;
+}
+
+.btn-1:hover {
+  background-color: #eea47fff;
+  color: #00539cff;
+  box-shadow: 1px 1px 200px 50px #00539cff;
+}
+
+.btn-2:hover {
+  background-color: #fbeaeb;
+  color: #2f3c7e;
+  box-shadow: 1px 1px 200px 50px #2f3c7e;
+}
+
+.btn-3:hover {
+  background-color: #ccf381;
+  color: #4831d4;
+  box-shadow: 1px 1px 200px 50px #4831d4;
+}
+
+.btn-4:hover {
+  background-color: #fcf6f5ff;
+  color: #990011ff;
+  box-shadow: 1px 1px 200px 50px #990011ff;
+}
+
+.btn-5:hover {
+  background-color: #e3b448;
+  color: #3a6b35;
+  box-shadow: 1px 1px 200px 50px #3a6b35;
+}
+
+.btn-6:hover {
+  background-color: #fbf8be;
+  color: #234e70;
+  box-shadow: 1px 1px 200px 50px #234e70;
+}
+
+/* End of Styles - Categories (categories.html) */
 
 /* Styles - Footer */
 .footer-section {
@@ -78,7 +300,15 @@ body {
 }
 
 .footer-form-text {
-  opacity: 0.9;
+  opacity: 1;
+}
+
+.footer-or {
+  font-family: "Kanit";
+  color: white;
+  margin-bottom: 1.5625rem;
+  font-size: 2rem;
+  opacity: 1;
 }
 
 .contact-logo > a {
@@ -108,9 +338,13 @@ body {
 .footer-item a {
   font-family: "Kanit";
   color: white;
-  opacity: 0.9;
+  opacity: 0.67;
   font-size: 1.3rem;
   text-decoration: none;
+}
+
+.footer-item a:hover {
+  opacity: 1;
 }
 
 .left-col {
@@ -136,11 +370,35 @@ body {
 /* Extra Large Breakpoint */
 @media only screen and (max-width: 74.9375rem) {
   /* Nav */
+
+  /* Showcase */
+
+  /* Movies */
+
+  /* Categories */
+  .btn-categories {
+    width: 18.75rem;
+  }
+
+  .text-categories {
+    font-size: 2rem;
+  }
 }
 
 /* Large Breakpoint */
 @media only screen and (max-width: 61.9375rem) {
   /* Nav */
+
+  /* Showcase */
+  .display-description {
+    font-size: 1.4rem;
+    width: 100%;
+    min-width: 21rem;
+  }
+
+  /* Movies */
+
+  /* Categories */
 
   /* Footer */
   .footer-item-group {
@@ -183,7 +441,24 @@ body {
     right: -4.625rem !important;
   }
 
+  /* Categories */
+  .categories-group {
+    gap: 25px;
+    justify-content: space-evenly;
+  }
+
+  .categories-item {
+    width: 30%;
+  }
+
+  .categories-item-btn {
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+  }
+
   /* Footer */
+
   .row-footer-whole {
     flex-direction: column;
     gap: 1.5625rem;
@@ -224,6 +499,9 @@ body {
 
 /* Small Breakpoint */
 @media only screen and (max-width: 35.9375rem) {
+  body {
+    background-color: salmon;
+  }
   /* Nav */
   .nav-signIn {
     display: none;
@@ -248,5 +526,22 @@ body {
   .navbar-expand .navbar-nav .dropdown-menu {
     top: 0.625rem !important;
     right: -4.625rem !important;
+  }
+
+  /* Categories */
+
+  .categories-group {
+    gap: 8px;
+    justify-content: space-evenly;
+  }
+
+  .categories-item {
+    width: 30%;
+  }
+
+  .categories-item-btn {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
   }
 }
