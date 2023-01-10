@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JayaWatch</title>
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="assets/css/action.css" />
+  </head>
+  <body style="overflow-x: hidden">
+    <!-- Navigation -->
+    <nav style="margin-bottom: -0.0625rem">
+      <div class="nav navbar-expand">
+        <div class="container">
+          <div class="row nav-row">
+            <div class="col-6 d-flex justify-content-center pe-5">
+              <a href="index.html" class="navbar-brand">JayaWatch</a>
+            </div>
+            <div class="col-6 d-flex justify-content-center align-items-center">
+              <ul class="navbar-nav d-flex gap-4">
+                <li class="nav-item">
+                  <button class="btn search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                  </button>
+                </li>
+                <li class="nav-item dropdown" id="dropdown-menu">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-three-dots" viewBox="0 0 16 16">
+                      <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="index.html" class="dropdown-item" style="color: black">Home</a></li>
+                    <li><a href="about.html" target="_blank" class="dropdown-item" style="color: black">About</a></li>
+                    <li><a href="categories.html" target="_blank" class="dropdown-item" style="color: black">Categories</a></li>
+                    <li><a href="#" class="dropdown-item" style="color: black">Settings</a></li>
+                    <li><a href="#" class="dropdown-item dropdown-signIn" data-bs-toggle="modal" data-bs-target="#signIn-modal" style="color: black; display: none">Sign In</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <!-- Modal Sign In Button -->
+                  <button type="submit" class="btn btn-white nav-signIn" data-bs-toggle="modal" data-bs-target="#signIn-modal">Sign in</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Sign in Modal -->
+    <div class="modal fade" id="signIn-modal" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="signIn-modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content d-flex justify-content-center align-items-center">
+          <!-- Sign-in Area -->
+          <div class="container signInArea d-flex flex-column p-4">
+            <div class="signInTitle d-flex justify-content-between">
+              <span>Sign in</span>
+              <button class="btn btn-close btn-close-signIn" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div>
+              <input type="text" placeholder="Enter phone number or email address" class="registInput form-control" />
+              <input type="password" placeholder="Enter password" class="registInput form-control" />
+            </div>
+            <div class="form-check form-switch switchCheckbox">
+              <input type="checkbox" class="form-check-input" />
+              <label class="form-check-label"> Keep me Signed In </label>
+            </div>
+            <div>
+              <button class="signInBtn btn p-3">Sign In</button>
+            </div>
+            <div>
+              <button class="signUpBtn btn btn-link p-3">Sign Up</button>
+            </div>
+            <div class="or">or</div>
+            <div class="d-flex flex-column">
+              <button class="btn btn-light mb-3 p-3 btnContinue"><i class="bi bi-google"></i> Continue with Google</button>
+              <button class="btn btn-light mb-3 p-3 btnContinue"><i class="bi bi-facebook"></i> Continue with Facebook</button>
+              <button class="btn btn-light p-3 btnContinue"><i class="bi bi-apple"></i> Continue with Apple</button>
+            </div>
+          </div>
+          <!-- End of Sign-in Area -->
+        </div>
+      </div>
+    </div>
+    <!-- End of Sign in Modal -->
+    <!-- End of Navigation -->
+
+    <!-- Breadcrumbs Section -->
+    <section class="section-breadcrumbs container mt-3">
+      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item inactive-breadcrumb"><a href="index.html" target="_blank">Home</a></li>
+          <li class="breadcrumb-item inactive-breadcrumb"><a href="categories.html" target="_blank">Categories</a></li>
+          <li class="breadcrumb-item active active-breadcrumb" aria-current="page">Action</li>
+        </ol>
+      </nav>
+    </section>
+
+    <!-- Alert -->
+    <section class="alert">
+      <div class="alert alert-success alert-dismissible" role="alert" style="width: 100%">
+        <p>New movies coming out on 2023! <a href="#" class="alert-link me-5">Check it out</a></p>
+        <button type="button" class="btn-close" aria-label="close" data-bs-dismiss="alert"></button>
+      </div>
+    </section>
+    <!-- End of Alert -->
+
+    <!-- Action Movie Section -->
+    <section class="container action-section">
+      <h1 class="movies-title">Action Movies</h1>
+      <div class="card-section">
+        <!-- Card - 1 - Avatar: The Way of Water -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-1">
+          <div class="card-img-overlay action-thumb-1">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Avatar: The Way of Water</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-1Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-1">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">Avatar: The Way of Water</h1>
+                <h2 class="modal-categories">Action - Adventure - Fantasy</h2>
+                <p class="modal-description">
+                  Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect
+                  their home.
+                </p>
+                <p class="modal-cast">Director: James Cameron</p>
+                <p class="modal-cast">Cast: Sam Worthington, Zoe Saldaña, Sigourney Weaver</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 2 - Bullet Train -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-2">
+          <div class="card-img-overlay action-thumb-2">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Bullet Train</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-2Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-2">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">Bullet Train</h1>
+                <h2 class="modal-categories">Action - Comedy - Thriller</h2>
+                <p class="modal-description">
+                  Code name, Ladybug, is a hitman who's had difficult times and is working with a therapist to reduce stress in his life and to be more positive. He's actively trying to be less violent. He's given an assignment to steal a
+                  briefcase from a moving bullet train. Unfortunately for Ladybug, the case is in the possession of other hitmen. Oh, and there are also several other dangerous people and 1 snake aboard the train. As the journey progresses,
+                  the briefcase changes hands several times and the reason so many violent people are on the train becomes apparent. The plot is carried on by the device of sudden cuts to earlier events to explain how the current situation
+                  develops.
+                </p>
+                <p class="modal-cast">Director: David Leitch</p>
+                <p class="modal-cast">Cast: Brad Pitt, Joey King, Aaron Taylor-Johnson</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 3 - Top Gun Maverick -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-3">
+          <div class="card-img-overlay action-thumb-3">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Top Gun: Maverick</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-3Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-3">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">Top Gun: Maverick</h1>
+                <h2 class="modal-categories">Action - Drama</h2>
+                <p class="modal-description">
+                  After more than thirty years of service, military awards, medals and decorations for extraordinary heroism in combat, distinguished US Navy Captain Pete Mitchell, call sign Maverick, finds himself exactly where he belongs:
+                  pushing the limits as a top test pilot. Having spent years avoiding promotions after the events of Top Gun (1986), Maverick must now confront the ugly past and an uncertain future while tasked with training the next
+                  generation of elite fighter pilots for a nearly impossible suicide mission. As the veteran naval aviator prepares the brilliant graduates for the top-secret assignment, stretching the rules to the breaking point, Mitchell
+                  has to face an equally critical challenge: navigate through an uncomfortable relationship with a hotshot lieutenant holding a grudge. Can Maverick and his Top Guns perform a miracle, give the enemy hell, and come back home
+                  in one piece?
+                </p>
+                <p class="modal-cast">Director: Joseph Kosinski</p>
+                <p class="modal-cast">Cast: Tom Cruise, Val Kilmer, Miles Teller</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 4 - Everything Everywhere All at Once -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-4">
+          <div class="card-img-overlay action-thumb-4">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Everything Everywhere All at Once</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-4Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-4">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">Everything Everywhere All at Once</h1>
+                <h2 class="modal-categories">Action - Adventure - Comedy</h2>
+                <p class="modal-description">
+                  With her laundromat teetering on the brink of failure and her marriage to wimpy husband Waymond on the rocks, overworked Evelyn Wang struggles to cope with everything, including a tattered relationship with her judgmental
+                  father Gong Gong and Joy, her daughter. And, as if facing a gloomy midlife crisis weren't enough, Evelyn must brace herself for an unpleasant meeting with an impersonal bureaucrat: Deirdre, the shabbily dressed IRS
+                  auditor. However, as the stern agent loses patience, an inexplicable multiverse rift becomes an eye-opening exploration of parallel realities. Will Evelyn jump down the rabbit hole? How many stars are there in the
+                  universe? Can weary Evelyn fathom the irrepressible force of possibilities, tap into newfound powers, and prevent an evil entity from destroying the thin, countless layers of the unseen world?
+                </p>
+                <p class="modal-cast">Director: Daniel Kwan, Daniel Scheinert</p>
+                <p class="modal-cast">Cast: Michelle Yeoh, Stephanie Hsu, Ke Huy Quan</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 5 - Strange World -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-5">
+          <div class="card-img-overlay action-thumb-5">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Strange World</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-5Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-5">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">Strange World</h1>
+                <h2 class="modal-categories">Action - Action - Adventure</h2>
+                <p class="modal-description">
+                  Strange World is a touching film that sends viewers on a wild adventure into the unknown depths of just that — a strange world. The animation is a feast for the eyes as we are shown things we have never seen before. The
+                  environments are stunning, the creatures exotic, and message about treating the land and plants with love and care is an important one. On top of that, Strange World has a great voice cast that breathes life into every one
+                  of these characters while making them relatable and entertaining. The adorable Splat and silly Legend are the ones who steal the show.
+                </p>
+                <p class="modal-cast">Director: Don Hall, Qui Nguyen</p>
+                <p class="modal-cast">Cast: Jake Gyllenhaal, Dennis Quaid, Jaboukie Young-White</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 6 - Violent Night -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-6">
+          <div class="card-img-overlay action-thumb-6">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Violent Night</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-6Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-6">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">Violent Night</h1>
+                <h2 class="modal-categories">Action - Comedy - Crime</h2>
+                <p class="modal-description">
+                  Christmas Eve, 2022. Having spent centuries bringing gifts and spreading holiday cheer to children around the world, disillusioned Santa Claus now toys with the idea of hanging up his boots. Instead, he is in for a nasty
+                  surprise when he sets foot in the lavish Lightstone mansion and realises Christmas-hating Scrooge and his armed-to-the-teeth mercenaries have taken 7-year-old Trudy and her family hostage. Now, there's no turning back. Are
+                  the bad guys prepared for an unlikely opponent and a long, bloody, violent night?
+                </p>
+                <p class="modal-cast">Director: Tommy Wirkola</p>
+                <p class="modal-cast">Cast: David Harbour, John Leguizamo, Alex Hassell</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 7 - Black Adam-->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-7">
+          <div class="card-img-overlay action-thumb-7">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Black Adam</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-7Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-7">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">Black Adam</h1>
+                <h2 class="modal-categories">Action - Adventure - Fantasy</h2>
+                <p class="modal-description">
+                  Reawakening after 5000 years, Black Adam becomes the world's ruthless protector: an anti-villain to take on the likes of Superman and Wonder Woman. Now in the 21st-Century, Black Adam must face off against the Justice
+                  Society of America and its heroes: Doctor Fate, Hawkman, Atom Smasher and Cyclone. The fate of the world hangs in the balance.
+                </p>
+                <p class="modal-cast">Director: Jaume Collet-Serra</p>
+                <p class="modal-cast">Cast: Dwayne Johnson, Aldis Hodge, Noah Centineo</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 8 - Black Panther: Wakanda Forever -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-8">
+          <div class="card-img-overlay action-thumb-8">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Black Panther: Wakanda Forever</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-8Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-8">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">Black Panther: Wakanda Forever</h1>
+                <h2 class="modal-categories">Action - Adventure - Drama</h2>
+                <p class="modal-description">
+                  At the dawn of King T'Challa's death, invading forces from around the world target Wakanda's vibranium, unleashing chaos, and it will be the duty of Shuri, M'Baku, Nakia and Okoye to defend the nation, especially when a
+                  mysterious Mexican civilization emerges from the depths of the sea.
+                </p>
+                <p class="modal-cast">Director: Ryan Coogler</p>
+                <p class="modal-cast">Cast: Letitia Wright, Lupita Nyong'o, Danai Gurira</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 9 - The Batman -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-9">
+          <div class="card-img-overlay action-thumb-9">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">The Batman</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-9Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-9">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">The Batman</h1>
+                <h2 class="modal-categories">Action - Crime - Drama</h2>
+                <p class="modal-description">
+                  Two years into the never-ending mission to rid Gotham City of violence and municipal corruption, reclusive billionaire and masked vigilante Bruce Wayne realises that the vast metropolis still oozes with crime. With the
+                  mayor killed at the hands of the Riddler, a psychotic terrorist hitting corrupt high-profile targets, Bruce joins forces with Commissioner Gordon to piece clues together and take down the elusive killer obsessed with the
+                  Wayne family and Bruce himself. As Gotham's self-appointed dark knight tries to find his feet, a white-knuckle, cat-and-mouse game attracts cryptic allies and dangerous adversaries, and no one is safe from harm. But is The
+                  Batman a blessing or a curse? A friend or a foe?
+                </p>
+                <p class="modal-cast">Director: Matt Reeves, Peter Craig</p>
+                <p class="modal-cast">Cast: Robert Pattinson, Zoë Kravitz, Paul Dano</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 10 - The Northman -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-10">
+          <div class="card-img-overlay action-thumb-10">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">The Northman</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-10Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-10">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">The Northman</h1>
+                <h2 class="modal-categories">Action - Adventure - Drama</h2>
+                <p class="modal-description">
+                  The Viking Age. With a mind aflame with hate and revenge, Prince Amleth, the wronged son of King Aurvandill War-Raven, heads to cold, windswept Iceland to retrieve what was stolen from him: a father, a mother, and a
+                  kingdom. And like a war dog picking up the enemy's scent, brutal Amleth embarks on a murderous quest to find the hateful adversary, whose life is forever woven together with his by the threads of fate. Now, in the name of
+                  Valhalla, no one can stop the Northman, not even God.
+                </p>
+                <p class="modal-cast">Director: Robert Eggers, Sjón</p>
+                <p class="modal-cast">Cast: Alexander Skarsgård, Nicole Kidman, Anya Taylor-Joy</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 11 - Jurassic World: Dominion-->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-11">
+          <div class="card-img-overlay action-thumb-11">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Jurassic World: Dominion</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-11" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-11Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-11">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">Jurassic World: Dominion</h1>
+                <h2 class="modal-categories">Action - Adventure - Sci-fi</h2>
+                <p class="modal-description">
+                  After surviving the destruction of Isla Nubla, Owen Grady and Claire Dearing took in young Maisie Lockwood. They've been living under the radar to protect Maisie, but she feels like a prisoner. When Maisie goes missing,
+                  Owen and Claire set out to find her, and eventually confront Lewis Dodgson, owner of Biosyn. Paleobotanist Ellie Sattler, Paleontologist Alan Grant, and Chaotician Ian Malcolm set out to expose Dodgson's schemes.
+                </p>
+                <p class="modal-cast">Director: Colin Trevorrow</p>
+                <p class="modal-cast">Cast: Chris Pratt, Bryce Dallas Howard, Isabella Sermon</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 12 - All Quiet on the Western Front-->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-12">
+          <div class="card-img-overlay action-thumb-12">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">All Quiet on the Western Front</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-12" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-12Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-12">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">All Quiet on the Western Front</h1>
+                <h2 class="modal-categories">Action - Drama - War</h2>
+                <p class="modal-description">
+                  Germany, 1917. With dreams of serving the Fatherland and Kaiser Wilhelm II, idealistic 17-year-old Paul Bäumer and his chest-thumping schoolmates enlist en masse in the Imperial German Army three years after the outbreak
+                  of World War I. And with a mind aflame with patriotic fervour instilled by their jingoistic teacher's rousing speeches, the unripe defenders fantasise about performing heroic feats as they march into battle-scarred
+                  Northern France. Instead, the chaos of trench warfare and the horrors of war await the inexperienced brothers-in-arms, who now risk life and limb for the glory of Germany. As the irrefutable certainty of death crushes the
+                  companions' romantic visions, Paul must fight tooth and nail to stay alive until the Armistice of 11 November 1918 takes effect and the guns on the Western Front fall silent. After all, war is a game for politicians and
+                  generals; for the common soldier, it is a waltz of death on the battlefield.
+                </p>
+                <p class="modal-cast">Director: Edward Berger</p>
+                <p class="modal-cast">Cast: Felix Kammerer, Albrecht Schuch, Daniel Brühl</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 13 - RRR -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-13">
+          <div class="card-img-overlay action-thumb-13">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">RRR</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-13" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-13Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-13">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">RRR</h1>
+                <h2 class="modal-categories">Action - Drama</h2>
+                <p class="modal-description">
+                  During the British era, Malli, a small tribal girl, is taken away by British governor Scott Buxton and his wife Catherine against the wishes of her mother. Rama Raju is an Indian cop who works for the British army; for him
+                  duty comes first, and he is very ruthless to revolutionary Indians but is never given his due by British government. The British government find that a tribal Komaram Bheem, who considers Malli his sister, has started his
+                  search for her and could be an obstacle for the British army. The governor and his wife announce a special post for any officer who can bring Bheem to them. Rama Raju decides to take the matters into his own hands and
+                  promises the government to bring him in dead or alive. Bheem by now has reached he city in search of Malli and pretends to be a mechanic, Akhtar. During a train accident on a lake he and Rama Raju risk their lives and save
+                  a kid and become best of friends. But each man will clash with the other and will thirst for each other's blood in order to complete their missions.
+                </p>
+                <p class="modal-cast">Director: S.S. Rajamouli</p>
+                <p class="modal-cast">Cast: N.T. Rama Rao Jr., Ram Charan Teja, Ajay Devgn</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 14 -  The Gray Man -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-14">
+          <div class="card-img-overlay action-thumb-14">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">The Gray Man</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-14" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-14Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-14">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">The Gray Man</h1>
+                <h2 class="modal-categories">Action - Thriller</h2>
+                <p class="modal-description">
+                  Six, a highly-skilled assassin in the deep-cover Sierra program of the CIA, is the agency's best merchant of death. However, a mission goes bad and now Six is on the run from the CIA with sociopathic former agent Lloyd
+                  Hansen hot on his trail. Aided by agent Dani Miranda and handler Donald Fitzroy, Six must be his most ruthless to avoid Hansen, who will stop at nothing to bring him down.
+                </p>
+                <p class="modal-cast">Director: Anthony Russo, Joe Russo</p>
+                <p class="modal-cast">Cast: Ryan Gosling, Chris Evans, Ana de Armas</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 15 - Emancipation -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-15">
+          <div class="card-img-overlay action-thumb-15">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Emancipation</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-15" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-15Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-15">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">Emancipation</h1>
+                <h2 class="modal-categories">Action - Thriller</h2>
+                <p class="modal-description">
+                  Who is Peter? A symbol, a resilient rebel, a family man, an action star this side of Rambo wandering the swamp and fighting with slave catchers and alligators? Fuqua believes Peter is all of the above. Unfortunately, in
+                  wearing these many hats, "Emancipation" becomes an exhaustive, vicious, and stylistically overcooked recounting of a man whose very visage led the abolitionist charge. "Emancipation" is a hollow piece of genre filmmaking
+                  that rarely answers, "Why this story and why now?"
+                </p>
+                <p class="modal-cast">Director: Antoine Fuqua</p>
+                <p class="modal-cast">Cast: Will Smith, Ben Foster, Charmaine Bingwa</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 16 - Thor: Love and Thunder -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-16">
+          <div class="card-img-overlay action-thumb-16">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Thor: Love and Thunder</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-16" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-16Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-16">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body d-flex flex-column">
+                  <h1 class="modal-title">Thor: Love and Thunder</h1>
+                  <h2 class="modal-categories">Action - Adventure - Comedy</h2>
+                  <p class="modal-description">desc</p>
+                  <p class="modal-cast">Director: Taika Waititi</p>
+                  <p class="modal-cast">Cast: Chris Hemsworth, Natalie Portman, Christian Bale</p>
+                  <div class="modal-body-button"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button><button type="button" class="btn btn-primary">WatchNow!</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 17 - Uncharted -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-17">
+          <div class="card-img-overlay action-thumb-17">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Uncharted</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-17" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-17Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-17">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">Uncharted</h1>
+                <h2 class="modal-categories">Action - Adventure</h2>
+                <p class="modal-description">
+                  Street-smart Nathan Drake (Tom Holland) is recruited by seasoned treasure hunter Victor "Sully" Sullivan (Mark Wahlberg) to recover a fortune amassed by Ferdinand Magellan and lost 500 years ago by the House of Moncada.
+                  What starts as a heist job for the duo becomes a globe-trotting, white-knuckle race to reach the prize before the ruthless Santiago Moncada (Antonio Banderas), who believes he and his family are the rightful heirs. If Nate
+                  and Sully can decipher the clues and solve one of the world's oldest mysteries, they stand to find $5 billion in treasure and perhaps even Nate's long-lost brother...but only if they can learn to work together.
+                </p>
+                <p class="modal-cast">Director: Ruben Fleischer</p>
+                <p class="modal-cast">Cast: Tom Holland, Mark Wahlberg, Antonio Banderas</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card - 18 - Enola Holmes 2 -->
+        <!-- Button trigger modal for Showcase Section-->
+        <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-18">
+          <div class="card-img-overlay action-thumb-18">
+            <div class="play-icon">
+              <div class="inside-play-icon"></div>
+            </div>
+            <h1 class="card-title">Enola Holmes 2</h1>
+            <span class="card-text">(2022)</span>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popular-modal-button-18" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="popular-modal-button-18Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-action-18">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <h1 class="modal-title">Enola Holmes 2</h1>
+                <h2 class="modal-categories">Action - Adventure - Crime</h2>
+                <p class="modal-description">
+                  Fresh off the triumph of solving her first case, Enola Holmes (Millie Bobby Brown) follows in the footsteps of her famous brother, Sherlock (Henry Cavill), and opens her own agency - only to find that lite as a female
+                  detective-for-hire isn't as easy as it seems. Resigned to accepting the cold realities of adulthood, she is about to close shop when a penniless matchstick girl offers Enola her first official job: to find her missing
+                  sister. But this case proves to be far more puzzling than expected, as Enola is thrown into a dangerous new world-from London's sinister factories and colorful music halls, to the highest echelons of society and 221B Baker
+                  Street itself. As the sparks of a deadly conspiracy ignite, Enola must call upon the help of friends - and Sherlock himself - to unravel her mystery. The game, it seems, has found its feet again.
+                </p>
+                <p class="modal-cast">Director: Harry Bradbeer</p>
+                <p class="modal-cast">Cast: Millie Bobby Brown, Henry Cavill, David Thewlis</p>
+                <div class="modal-body-button">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Watch Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="other-pages mt-5 d-flex justify-content-center gap-3">
+        <button class="btn btn-success">1</button>
+        <button class="btn btn-success">2</button>
+        <button class="btn btn-success">3</button>
+        <button class="btn btn-success">4</button>
+        <button class="btn btn-success">
+          Last
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+          </svg>
+        </button>
+      </div>
+    </section>
+    <!-- End of Action Movie Section -->
+
+    <!-- Footer -->
+    <footer class="footer-section pb-md-3 pb-5 pe-1">
+      <div class="row mt-5 row-footer-whole">
+        <div class="col-12 col-md-6 mt-4 left-col">
+          <a href="#" class="footer-brand d-flex justify-content-center" style="font-size: 3rem">JayaWatch</a>
+          <p class="brand-tagline mb-5 mb-md-0">The most complete and free movie platform only on JayaWatch</p>
+          <div class="row justify-content-evenly align-items-baseline row-footer-item-group mt-md-3 mt-0">
+            <div class="col-12 col-md-3 ps-0 ps-md-5 mb-2 mb-md-0">
+              <h1 class="footer-title mb-2 mt-0 mt-md-4 text-center text-md-start pt-xl-4 pt-0">Navigation</h1>
+              <ul class="footer-item-group">
+                <li class="footer-item"><a href="index.html">Home</a></li>
+                <li class="footer-item"><a href="about.html" target="_blank">About</a></li>
+                <li class="footer-item"><a href="categories.html" target="_blank">Categories</a></li>
+                <li class="footer-item"><a href="#">Setting</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-3 ps-0 ps-md-5 mb-2 mb-md-0">
+              <h1 class="footer-title mb-2 mt-4 text-center text-md-center">Categories</h1>
+              <ul class="footer-item-group">
+                <li class="footer-item"><a href="#">Anime</a></li>
+                <li class="footer-item"><a href="#">Series</a></li>
+                <li class="footer-item"><a href="#">Horror</a></li>
+                <li class="footer-item"><a href="action.html">Action</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-3 ps-0 ps-md-5 mb-2 mb-md-0">
+              <h1 class="footer-title mb-2 mt-4 text-center text-md-start">Donation</h1>
+              <ul class="footer-item-group">
+                <li class="footer-item"><a href="#">Paypal</a></li>
+                <li class="footer-item"><a href="#">Gopay</a></li>
+                <li class="footer-item"><a href="#">OVO</a></li>
+                <li class="footer-item"><a href="#">Dana</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-3 ps-0 ps-md-5 d-md-none mb-2 mb-md-0">
+              <h1 class="footer-title mb-2 mt-4 text-center text-md-start">Connect</h1>
+              <ul class="footer-item-group">
+                <li class="footer-item">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-twitter me-4" viewBox="0 0 16 16">
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-item">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-instagram me-4" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-item">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-facebook me-4" viewBox="0 0 16 16">
+                      <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-item">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-github" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h1 class="copyright-text">Made by Brianjaya Andhika</h1>
+        </div>
+        <div class="col-md-6 col-10 mt-4 right-col">
+          <div class="row">
+            <div class="col-12 footer-connect-section">
+              <h1 class="text-white text-center footer-form-text mb-3">Connect with me !</h1>
+              <div class="contact-logo text-center">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-twitter me-4" viewBox="0 0 16 16">
+                    <path
+                      d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-instagram me-4" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-facebook me-4" viewBox="0 0 16 16">
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-github" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                    />
+                  </svg>
+                </a>
+                <br />
+                <h1 class="footer-or mt-4 mb-2">Or</h1>
+              </div>
+            </div>
+            <div class="col-12 message-footer-section">
+              <h1 class="text-white text-center footer-form-text mb-4">Send me a message</h1>
+              <form action="#" method="GET">
+                <div class="col-7">
+                  <input type="email" placeholder="Email Address" class="form-control mb-4" />
+                </div>
+                <div class="col-7">
+                  <input type="text" placeholder="Subject" class="form-control mb-4" />
+                </div>
+                <div class="col-11">
+                  <textarea class="form-control" rows="6" placeholder="Enter your message"></textarea>
+                </div>
+                <div class="col-11 d-flex justify-content-start">
+                  <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End of Footer -->
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>

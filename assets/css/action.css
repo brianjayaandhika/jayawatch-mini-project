@@ -1,0 +1,891 @@
+/* BS Icon */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Poppins:wght@400;700&display=swap"); /* Styles */
+/* Kanit for Brand Name */
+/* Poppins for text */
+
+/* Colour */
+:root {
+  --bs-yellow: #fcf404;
+}
+
+/* Styles */
+
+body {
+  background-color: #000;
+}
+
+/* Styles - Navigation */
+
+.navbar-brand {
+  color: var(--bs-yellow);
+  letter-spacing: 0.1875rem;
+  font-size: 2.5rem;
+  font-family: "Kanit";
+}
+
+.navbar-brand:hover,
+.navbar-brand:active,
+.navbar-brand:visited {
+  color: var(--bs-yellow);
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+  font-family: "Poppin";
+  opacity: 0.9;
+}
+
+.nav-signIn {
+  width: 6.25rem;
+  color: white;
+  font-size: 1.3rem;
+  font-family: "Poppin";
+  opacity: 0.9;
+}
+
+.nav-signIn:hover,
+.search-btn:hover,
+#dropdown-menu:hover > .dropdown-toggle {
+  opacity: 0.6;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+/* End of Styles - Navigation */
+
+/* Sign in Area */
+
+.signInArea {
+  border-radius: 8px;
+  box-shadow: 1px 2px 5px 5px rgba(122, 121, 121, 0.241);
+}
+
+.signInTitle {
+  font-family: "Poppin";
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 41px;
+  color: var(--bs-yellow);
+}
+
+.registInput {
+  font-family: "Poppin";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1.5px solid black;
+}
+
+.switchCheckbox {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.signInBtn {
+  font-family: "Poppin";
+  font-weight: 500;
+  font-size: 1.15rem;
+  width: 100%;
+  border-radius: 8px;
+  color: var(--bs-yellow);
+  border: 2px solid var(--bs-yellow);
+  margin-bottom: 1rem;
+}
+
+.signUpBtn {
+  font-family: "Poppin";
+  font-size: 1.15rem;
+  width: 100%;
+  text-decoration: none;
+  background-color: var(--bs-yellow);
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.form-check-input:checked {
+  background-color: var(--bs-yellow);
+  border-color: var(--bs-yellow);
+}
+
+.or {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppin";
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.btnContinue {
+  font-family: "Kanit";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.btn-close-signIn {
+  background: transparent
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
+    center/1em auto no-repeat;
+  opacity: 0.9;
+}
+
+/* End of Sign in Modal */
+
+/* Styles - Breadcrumbs */
+.active-breadcrumb {
+  color: white !important;
+  font-size: 1.1rem;
+  font-family: "Poppin";
+  opacity: 0.9;
+}
+
+.active-breadcrumb::before {
+  --bs-breadcrumb-divider-color: white;
+}
+
+.inactive-breadcrumb a {
+  color: white !important;
+  font-size: 1.1rem;
+  font-family: "Poppin";
+  opacity: 0.7;
+}
+
+.profile-title {
+  font-family: "Kanit";
+  color: white;
+  opacity: 1;
+  margin-bottom: 1.5625rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.profile-text {
+  color: white;
+  font-family: "Poppin";
+  text-align: start;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  line-height: 2.25rem;
+}
+
+/* End of Styles - Breadcrumbs */
+
+/* Styles - Alert */
+.alert {
+  padding: 0.625rem;
+  padding-bottom: 0rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.alert > p {
+  position: relative;
+  top: 0.1875rem !important;
+}
+
+.alert > button {
+  top: -0.1875rem !important;
+}
+
+/* End of Styles - Alert */
+
+/* Styles - Modal */
+
+.modal {
+  --bs-modal-width: 41.25rem;
+}
+
+.modal-content {
+  background-color: black;
+  color: white;
+  width: 41rem;
+}
+
+.modal-header {
+  height: 28rem;
+  border-bottom: 0 !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.modal-header button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba(255,255,255,1)'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
+    center/1em auto no-repeat;
+}
+
+.modal-body {
+  margin-top: -10.625rem;
+}
+
+.modal-title {
+  font-size: 2rem;
+  line-height: 3.0625rem;
+  font-weight: 700;
+  color: white;
+  font-family: "Poppin";
+  text-align: start;
+}
+
+.modal-categories {
+  font-size: 1.2rem;
+  color: rgba(214, 210, 210, 0.812);
+  margin-bottom: 2rem;
+  font-family: "Poppin";
+  margin-bottom: 0.9375rem;
+  text-align: start;
+}
+
+.modal-description {
+  font-family: "Poppin";
+  font-size: 1.2rem;
+  color: white;
+  line-height: 2.4375rem;
+  width: 100%;
+  text-align: start;
+}
+
+.modal-cast {
+  font-family: "Poppin";
+  font-size: 1.1rem;
+  width: 41rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1rem;
+  text-align: start;
+}
+
+.modal-body-button {
+  display: flex;
+  gap: 0.9375rem;
+  justify-content: end;
+}
+
+.modal-header-popular-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Popular/thumbnail-1.webp);
+}
+
+/* End of Styles - Modal */
+
+/* Styles - Action Movies */
+.movies-title {
+  font-family: "Kanit";
+  color: white;
+  margin-bottom: 1.5625rem;
+  opacity: 1;
+}
+
+.card-section {
+  gap: 1.1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+}
+
+.card {
+  flex: 20%;
+  max-width: 200px;
+  height: 250px;
+  border-radius: 1rem;
+  transition: 0.75s;
+  overflow: hidden;
+  position: relative;
+  border: 0px;
+  opacity: 1;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  opacity: 0.8;
+}
+
+.card:hover .play-icon {
+  display: flex;
+}
+
+.card-img-overlay {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-img-overlay .card-title {
+  font-size: 0.9em;
+  text-align: center;
+  color: white;
+  font-family: "Poppin";
+}
+
+.card-img-overlay .card-text {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  color: white;
+  font-family: "Poppin";
+}
+
+.play-icon {
+  width: 80px;
+  height: 80px;
+  border: 2px solid white;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 70px;
+}
+
+.inside-play-icon {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid white;
+  position: relative;
+  left: 5px;
+}
+
+.action-thumb-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-1.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-3.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-4.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-5.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-6.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-7 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-7.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-8 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-8.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-9 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-9.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-10 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-10.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-11 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-11.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-12 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-12.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-13 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-13.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-14 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-14.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-15 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-15.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-16 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-16.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-17 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-17.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action-thumb-18 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../images/thumbnail/Action/action-18.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* End of Styles - Action Movies */
+
+/* Styles - Modal */
+
+.modal {
+  --bs-modal-width: 41.25rem;
+}
+
+.modal-content {
+  background-color: black;
+  color: white;
+  width: 41rem;
+}
+
+.modal-header {
+  height: 28rem;
+  border-bottom: 0 !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.modal-header button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba(255,255,255,1)'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
+    center/1em auto no-repeat;
+}
+
+.modal-body {
+  margin-top: -10.625rem;
+}
+
+.modal-title {
+  font-size: 2rem;
+  line-height: 3.0625rem;
+  font-weight: 700;
+  color: white;
+  font-family: "Poppin";
+  text-align: start;
+}
+
+.modal-categories {
+  font-size: 1.2rem;
+  color: rgba(214, 210, 210, 0.812);
+  margin-bottom: 2rem;
+  font-family: "Poppin";
+  margin-bottom: 0.9375rem;
+  text-align: start;
+}
+
+.modal-description {
+  font-family: "Poppin";
+  font-size: 1.2rem;
+  color: white;
+  line-height: 2.4375rem;
+  width: 100%;
+  text-align: start;
+}
+
+.modal-cast {
+  font-family: "Poppin";
+  font-size: 1.1rem;
+  width: 41rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1rem;
+  text-align: start;
+}
+
+.modal-body-button {
+  display: flex;
+  gap: 0.9375rem;
+  justify-content: end;
+}
+
+.modal-header-action-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-1.webp);
+}
+
+.modal-header-action-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-2.webp);
+}
+
+.modal-header-action-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-3.webp);
+}
+
+.modal-header-action-4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-4.webp);
+}
+
+.modal-header-action-5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-5.webp);
+}
+
+.modal-header-action-6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-6.webp);
+}
+
+.modal-header-action-7 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-7.webp);
+}
+
+.modal-header-action-8 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-8.webp);
+}
+
+.modal-header-action-9 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-9.webp);
+}
+
+.modal-header-action-10 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-10.webp);
+}
+
+.modal-header-action-11 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-11.webp);
+}
+
+.modal-header-action-12 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-12.webp);
+}
+
+.modal-header-action-13 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-13.webp);
+}
+
+.modal-header-action-14 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-14.webp);
+}
+
+.modal-header-action-15 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-15.webp);
+}
+
+.modal-header-action-16 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-16.webp);
+}
+
+.modal-header-action-17 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-17.webp);
+}
+
+.modal-header-action-18 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(../images/thumbnail/Action/action-18.webp);
+}
+/* End of Styles - Modal */
+
+/* Styles - Footer */
+.footer-section {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(252, 244, 4, 1));
+}
+
+.footer-brand {
+  color: var(--bs-yellow);
+  letter-spacing: 0.1875rem;
+  font-size: 2.5rem;
+  font-family: "Kanit";
+  text-decoration: none;
+}
+
+.footer-brand:hover {
+  color: var(--bs-yellow);
+}
+
+.brand-tagline {
+  color: white;
+  font-family: "Kanit";
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.footer-form-text {
+  opacity: 1;
+}
+
+.footer-or {
+  font-family: "Kanit";
+  color: white;
+  margin-bottom: 1.5625rem;
+  font-size: 2rem;
+  opacity: 1;
+}
+
+.contact-logo > a {
+  text-decoration: none;
+}
+
+.footer-title {
+  font-family: "Kanit";
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 1.5625rem;
+  font-size: 2rem;
+}
+
+.footer-item-group {
+  list-style: none;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+.footer-item {
+  margin-bottom: 0.3125rem;
+}
+
+.footer-item a {
+  font-family: "Kanit";
+  color: white;
+  opacity: 0.67;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.footer-item a:hover {
+  opacity: 1;
+}
+
+.left-col {
+  position: relative;
+}
+
+.copyright-text {
+  color: black;
+  font-family: "Kanit";
+  text-align: center;
+  font-size: 1.3rem;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* End of Styles - Footer */
+
+/* Media Queries */
+
+/* Extra Large Breakpoint */
+@media only screen and (max-width: 74.9375rem) {
+  /* Nav */
+
+  /* Showcase */
+
+  /* Movies */
+
+  /* Large Breakpoint */
+  @media only screen and (max-width: 61.9375rem) {
+    /* Nav */
+
+    /* Movies */
+
+    /* Categories */
+
+    /* Footer */
+    .footer-item-group {
+      display: flex;
+      flex-direction: row;
+      gap: 1.25rem;
+    }
+
+    .row-footer-item-group {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* Medium Breakpoint */
+  @media only screen and (max-width: 47.9375rem) {
+    /* Nav */
+    .nav-signIn {
+      display: none;
+    }
+
+    .dropdown-signIn {
+      display: block !important;
+    }
+
+    .navbar-nav {
+      margin-right: -4.375rem;
+    }
+
+    .img-col img {
+      width: 45rem !important;
+    }
+
+    .navbar-brand {
+      margin-left: 5rem;
+    }
+
+    .navbar-expand .navbar-nav .dropdown-menu {
+      top: 0.625rem !important;
+      right: -4.625rem !important;
+    }
+
+    /* Movies */
+
+    /* Modal */
+    .modal-content {
+      background-color: black;
+      color: white;
+      width: 35rem;
+    }
+
+    .modal {
+      --bs-modal-width: 35.25rem;
+    }
+
+    /* Footer */
+
+    .row-footer-whole {
+      flex-direction: column;
+      gap: 1.5625rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .copyright-text {
+      bottom: -500px;
+    }
+
+    .footer-connect-section {
+      display: none;
+    }
+
+    .row-footer-item-group {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .message-footer-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .message-footer-section > * {
+      min-width: 100%;
+    }
+
+    .footer-item-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  /* Small Breakpoint */
+  @media only screen and (max-width: 35.9375rem) {
+    /* Nav */
+    .nav-signIn {
+      display: none;
+    }
+
+    .dropdown-signIn {
+      display: block !important;
+    }
+
+    .navbar-nav {
+      margin-right: -4.375rem;
+    }
+
+    .img-col img {
+      width: 45rem !important;
+    }
+
+    .navbar-brand {
+      margin-left: 5rem;
+    }
+
+    .navbar-expand .navbar-nav .dropdown-menu {
+      top: 0.625rem !important;
+      right: -4.625rem !important;
+    }
+
+    /* Movies */
+
+    /* Modal */
+    .modal-content {
+      background-color: black;
+      color: white;
+      width: 100%;
+    }
+
+    .modal {
+      --bs-modal-margin: 2.907rem;
+    }
+    .modal-description {
+      height: 14.6875rem;
+      overflow: hidden;
+    }
+
+    .modal-description {
+      font-size: 1.2rem;
+      width: 100%;
+      text-align: start;
+    }
+
+    .modal-cast {
+      font-family: "Poppin";
+      font-size: 1.1rem;
+      width: 100%;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: start;
+      line-height: 2rem;
+    }
+  }
+}
