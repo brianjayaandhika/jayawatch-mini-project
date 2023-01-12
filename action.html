@@ -35,8 +35,8 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a href="index.html" class="dropdown-item" style="color: black">Home</a></li>
-                    <li><a href="about.html" target="_blank" class="dropdown-item" style="color: black">About</a></li>
-                    <li><a href="categories.html" target="_blank" class="dropdown-item" style="color: black">Categories</a></li>
+                    <li><a href="about.html" class="dropdown-item" style="color: black">About</a></li>
+                    <li><a href="categories.html" class="dropdown-item" style="color: black">Categories</a></li>
                     <li><a href="#" class="dropdown-item" style="color: black">Settings</a></li>
                     <li><a href="#" class="dropdown-item dropdown-signIn" data-bs-toggle="modal" data-bs-target="#signIn-modal" style="color: black; display: none">Sign In</a></li>
                   </ul>
@@ -57,30 +57,32 @@
         <div class="modal-content d-flex justify-content-center align-items-center">
           <!-- Sign-in Area -->
           <div class="container signInArea d-flex flex-column p-4">
-            <div class="signInTitle d-flex justify-content-between">
-              <span>Sign in</span>
-              <button class="btn btn-close btn-close-signIn" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div>
-              <input type="text" placeholder="Enter phone number or email address" class="registInput form-control" />
-              <input type="password" placeholder="Enter password" class="registInput form-control" />
-            </div>
-            <div class="form-check form-switch switchCheckbox">
-              <input type="checkbox" class="form-check-input" />
-              <label class="form-check-label"> Keep me Signed In </label>
-            </div>
-            <div>
-              <button class="signInBtn btn p-3">Sign In</button>
-            </div>
-            <div>
-              <button class="signUpBtn btn btn-link p-3">Sign Up</button>
-            </div>
-            <div class="or">or</div>
-            <div class="d-flex flex-column">
-              <button class="btn btn-light mb-3 p-3 btnContinue"><i class="bi bi-google"></i> Continue with Google</button>
-              <button class="btn btn-light mb-3 p-3 btnContinue"><i class="bi bi-facebook"></i> Continue with Facebook</button>
-              <button class="btn btn-light p-3 btnContinue"><i class="bi bi-apple"></i> Continue with Apple</button>
-            </div>
+            <form action="#" method="GET">
+              <div class="signInTitle d-flex justify-content-between">
+                <span>Sign in</span>
+                <button class="btn btn-close btn-close-signIn" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div>
+                <input type="text" placeholder="Enter phone number or email address" class="registInput form-control" />
+                <input type="password" placeholder="Enter password" class="registInput form-control" />
+              </div>
+              <div class="form-check form-switch switchCheckbox">
+                <input type="checkbox" class="form-check-input" />
+                <label class="form-check-label"> Keep me Signed In </label>
+              </div>
+              <div>
+                <button class="signInBtn btn p-3">Sign In</button>
+              </div>
+              <div>
+                <button class="signUpBtn btn btn-link p-3">Sign Up</button>
+              </div>
+              <div class="or">or</div>
+              <div class="d-flex flex-column">
+                <button class="btn btn-light mb-3 p-3 btnContinue"><i class="bi bi-google"></i> Continue with Google</button>
+                <button class="btn btn-light mb-3 p-3 btnContinue"><i class="bi bi-facebook"></i> Continue with Facebook</button>
+                <button class="btn btn-light p-3 btnContinue"><i class="bi bi-apple"></i> Continue with Apple</button>
+              </div>
+            </form>
           </div>
           <!-- End of Sign-in Area -->
         </div>
@@ -93,8 +95,8 @@
     <section class="section-breadcrumbs container mt-3">
       <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item inactive-breadcrumb"><a href="index.html" target="_blank">Home</a></li>
-          <li class="breadcrumb-item inactive-breadcrumb"><a href="categories.html" target="_blank">Categories</a></li>
+          <li class="breadcrumb-item inactive-breadcrumb"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item inactive-breadcrumb"><a href="categories.html">Categories</a></li>
           <li class="breadcrumb-item active active-breadcrumb" aria-current="page">Action</li>
         </ol>
       </nav>
@@ -111,8 +113,8 @@
 
     <!-- Action Movie Section -->
     <section class="container action-section">
-      <h1 class="movies-title">Action Movies</h1>
-      <div class="card-section">
+      <h1 class="movies-title text-md-start text-center">Action Movies</h1>
+      <div class="card-section gap-3 d-flex justify-content-center justify-content-md-start align-content-center flex-wrap">
         <!-- Card - 1 - Avatar: The Way of Water -->
         <!-- Button trigger modal for Showcase Section-->
         <div class="card display-modal-button" data-bs-toggle="modal" data-bs-target="#popular-modal-button-1">
@@ -778,11 +780,12 @@
         </div>
       </div>
       <div class="other-pages mt-5 d-flex justify-content-center gap-3">
-        <button class="btn btn-success">1</button>
-        <button class="btn btn-success">2</button>
-        <button class="btn btn-success">3</button>
-        <button class="btn btn-success">4</button>
-        <button class="btn btn-success">
+        <button class="btn bg-dark" style="color: yellow">1</button>
+        <button class="btn bg-dark" style="color: yellow">2</button>
+        <button class="btn bg-dark" style="color: yellow">3</button>
+        <button class="btn bg-dark" style="color: yellow">4</button>
+        <button class="btn bg-dark" style="color: yellow">5</button>
+        <button class="btn bg-dark" style="color: yellow">
           Last
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
@@ -803,18 +806,18 @@
               <h1 class="footer-title mb-2 mt-0 mt-md-4 text-center text-md-start pt-xl-4 pt-0">Navigation</h1>
               <ul class="footer-item-group">
                 <li class="footer-item"><a href="index.html">Home</a></li>
-                <li class="footer-item"><a href="about.html" target="_blank">About</a></li>
-                <li class="footer-item"><a href="categories.html" target="_blank">Categories</a></li>
+                <li class="footer-item"><a href="about.html">About</a></li>
+                <li class="footer-item"><a href="categories.html">Categories</a></li>
                 <li class="footer-item"><a href="#">Setting</a></li>
               </ul>
             </div>
             <div class="col-12 col-md-3 ps-0 ps-md-5 mb-2 mb-md-0">
-              <h1 class="footer-title mb-2 mt-4 text-center text-md-center">Categories</h1>
+              <h1 class="footer-title mb-2 mt-4 text-center text-md-start">Categories</h1>
               <ul class="footer-item-group">
+                <li class="footer-item"><a href="action.html">Action</a></li>
                 <li class="footer-item"><a href="#">Anime</a></li>
                 <li class="footer-item"><a href="#">Series</a></li>
                 <li class="footer-item"><a href="#">Horror</a></li>
-                <li class="footer-item"><a href="action.html">Action</a></li>
               </ul>
             </div>
             <div class="col-12 col-md-3 ps-0 ps-md-5 mb-2 mb-md-0">

@@ -35,8 +35,8 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a href="#" class="dropdown-item" style="color: black">Home</a></li>
-                    <li><a href="about.html" target="_blank" class="dropdown-item" style="color: black">About</a></li>
-                    <li><a href="categories.html" target="_blank" class="dropdown-item" style="color: black">Categories</a></li>
+                    <li><a href="about.html" class="dropdown-item" style="color: black">About</a></li>
+                    <li><a href="categories.html" class="dropdown-item" style="color: black">Categories</a></li>
                     <li><a href="#" class="dropdown-item" style="color: black">Settings</a></li>
                     <li><a href="#" class="dropdown-item dropdown-signIn" data-bs-toggle="modal" data-bs-target="#signIn-modal" style="color: black; display: none">Sign In</a></li>
                   </ul>
@@ -57,30 +57,32 @@
         <div class="modal-content d-flex justify-content-center align-items-center">
           <!-- Sign-in Area -->
           <div class="container signInArea d-flex flex-column p-4">
-            <div class="signInTitle d-flex justify-content-between">
-              <span>Sign in</span>
-              <button class="btn btn-close btn-close-signIn" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div>
-              <input type="text" placeholder="Enter phone number or email address" class="registInput form-control" />
-              <input type="password" placeholder="Enter password" class="registInput form-control" />
-            </div>
-            <div class="form-check form-switch switchCheckbox">
-              <input type="checkbox" class="form-check-input" />
-              <label class="form-check-label"> Keep me Signed In </label>
-            </div>
-            <div>
-              <button class="signInBtn btn p-3">Sign In</button>
-            </div>
-            <div>
-              <button class="signUpBtn btn btn-link p-3">Sign Up</button>
-            </div>
-            <div class="or">or</div>
-            <div class="d-flex flex-column">
-              <button class="btn btn-light mb-3 p-3 btnContinue"><i class="bi bi-google"></i> Continue with Google</button>
-              <button class="btn btn-light mb-3 p-3 btnContinue"><i class="bi bi-facebook"></i> Continue with Facebook</button>
-              <button class="btn btn-light p-3 btnContinue"><i class="bi bi-apple"></i> Continue with Apple</button>
-            </div>
+            <form action="#" method="GET">
+              <div class="signInTitle d-flex justify-content-between">
+                <span>Sign in</span>
+                <button class="btn btn-close btn-close-signIn" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div>
+                <input type="text" placeholder="Enter phone number or email address" class="registInput form-control" />
+                <input type="password" placeholder="Enter password" class="registInput form-control" />
+              </div>
+              <div class="form-check form-switch switchCheckbox">
+                <input type="checkbox" class="form-check-input" />
+                <label class="form-check-label"> Keep me Signed In </label>
+              </div>
+              <div>
+                <button class="signInBtn btn p-3">Sign In</button>
+              </div>
+              <div>
+                <button class="signUpBtn btn btn-link p-3">Sign Up</button>
+              </div>
+              <div class="or">or</div>
+              <div class="d-flex flex-column">
+                <button class="btn btn-light mb-3 p-3 btnContinue"><i class="bi bi-google"></i> Continue with Google</button>
+                <button class="btn btn-light mb-3 p-3 btnContinue"><i class="bi bi-facebook"></i> Continue with Facebook</button>
+                <button class="btn btn-light p-3 btnContinue"><i class="bi bi-apple"></i> Continue with Apple</button>
+              </div>
+            </form>
           </div>
           <!-- End of Sign-in Area -->
         </div>
@@ -756,18 +758,18 @@
               <h1 class="footer-title mb-2 mt-0 mt-md-4 text-center text-md-start pt-xl-4 pt-0">Navigation</h1>
               <ul class="footer-item-group">
                 <li class="footer-item"><a href="index.html">Home</a></li>
-                <li class="footer-item"><a href="about.html" target="_blank">About</a></li>
-                <li class="footer-item"><a href="categories.html" target="_blank">Categories</a></li>
+                <li class="footer-item"><a href="about.html">About</a></li>
+                <li class="footer-item"><a href="categories.html">Categories</a></li>
                 <li class="footer-item"><a href="#">Setting</a></li>
               </ul>
             </div>
             <div class="col-12 col-md-3 ps-0 ps-md-5 mb-2 mb-md-0">
-              <h1 class="footer-title mb-2 mt-4 text-center text-md-center">Categories</h1>
+              <h1 class="footer-title mb-2 mt-4 text-center text-md-start">Categories</h1>
               <ul class="footer-item-group">
+                <li class="footer-item"><a href="action.html">Action</a></li>
                 <li class="footer-item"><a href="#">Anime</a></li>
                 <li class="footer-item"><a href="#">Series</a></li>
                 <li class="footer-item"><a href="#">Horror</a></li>
-                <li class="footer-item"><a href="#">Action</a></li>
               </ul>
             </div>
             <div class="col-12 col-md-3 ps-0 ps-md-5 mb-2 mb-md-0">
